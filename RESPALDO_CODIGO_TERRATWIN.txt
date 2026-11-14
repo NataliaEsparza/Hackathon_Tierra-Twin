@@ -1,0 +1,5055 @@
+RESPALDO COMPLETO DEL PROYECTO TERRA-TWIN
+Generado el: 14/11/2026, 12:20:30 p.m.
+====================================================================
+
+
+####################################################################
+ARCHIVO: nasa-analog-backend\data\database.json
+####################################################################
+
+{
+  "users": [
+    {
+      "id": "user-demo-1",
+      "name": "Investigador invitado",
+      "email": "demo@terratwin.space",
+      "password": "demo",
+      "institution": "Laboratorio de Exploración Planetaria"
+    },
+    {
+      "id": "user-1794622206911",
+      "name": "Natalia Esparza",
+      "email": "chicademonio09@gmail.com",
+      "password": "12345",
+      "institution": "Universidad Politécnica de Durango"
+    }
+  ],
+  "discoveries": [
+    {
+      "id": "db-1794622265758",
+      "name": "Sector (26.981°, -85.385°)",
+      "country": "Coordenada satelital · Altitud: 0 m",
+      "category": "custom",
+      "isCustom": true,
+      "lat": 26.9808,
+      "lon": -85.3851,
+      "geologyType": "permafrost-regolith",
+      "hasCaves": false,
+      "slopeIndex": 25,
+      "logisticViability": 84,
+      "highlights": "Ubicación detectada en Sector (26.981°, -85.385°) (26.981°, -85.385°). Altitud aproximada: 0 m s.n.m..",
+      "logisticNotes": "Ubicación accesible para estudios de campo y validación de instrumentos.",
+      "climateData": {
+        "tMin": 11.27,
+        "tMax": 31.36,
+        "solar": 5.14,
+        "precip": 2.79,
+        "source": "NASA satélite (en vivo)"
+      },
+      "scores": {
+        "planetarySimilarity": 47.8,
+        "logisticViability": 84,
+        "missionReadinessScore": 60.5
+      },
+      "critique": {
+        "strongAnalogies": [
+          {
+            "dimension": "Tipo de roca y suelo",
+            "matchPct": 92,
+            "detail": "El tipo de roca coincide para probar taladros, recolección de muestras y sensores de minerales."
+          },
+          {
+            "dimension": "Luz y energía solar",
+            "matchPct": 72,
+            "detail": "La intensidad solar (5.14 kWh/m²/día) es adecuada para calibrar paneles solares de la misión."
+          }
+        ],
+        "analogyGaps": [
+          {
+            "dimension": "Sequedad del terreno",
+            "matchPct": 7,
+            "detail": "Hay mayor presencia de lluvia (2.79 mm/día) que en la superficie completamente seca de Luna."
+          },
+          {
+            "dimension": "Frío extremo",
+            "matchPct": 29,
+            "detail": "No alcanza el frío extremo de Cráter Shackleton (Polo Sur Lunar) (-180°C a -50°C), por lo que requiere cámaras térmicas."
+          }
+        ],
+        "planetaryLimitations": [
+          "Gravedad seis veces menor que en la Tierra: los vehículos y astronautas pesan mucho menos al desplazarse.",
+          "Ausencia total de aire (vacío): no existe viento ni sonido y el calor se disipa de forma distinta.",
+          "Polvo lunar afilado y cargado eléctricamente por la radiación directa del Sol."
+        ]
+      },
+      "radarComparison": {
+        "labels": [
+          "Frío extremo",
+          "Luz solar",
+          "Sequedad",
+          "Relieve",
+          "Tipo de roca",
+          "Cuevas"
+        ],
+        "targetValues": [
+          98,
+          85,
+          100,
+          88,
+          80,
+          20
+        ],
+        "earthValues": [
+          27,
+          57,
+          7,
+          25,
+          72,
+          85
+        ]
+      },
+      "userId": "user-1794622206911",
+      "savedAt": "13 nov 2026",
+      "matchedTargetName": "Cráter Shackleton (Polo Sur Lunar)",
+      "authorName": "Natalia Esparza",
+      "authorInstitution": "Universidad Politécnica de Durango"
+    },
+    {
+      "id": "db-1794622243650",
+      "name": "Hidalgo, Durango, México",
+      "country": "Durango, México · Altitud: 1834 m",
+      "category": "custom",
+      "isCustom": true,
+      "lat": 25.8642,
+      "lon": -104.6589,
+      "geologyType": "permafrost-regolith",
+      "hasCaves": false,
+      "slopeIndex": 51,
+      "logisticViability": 84,
+      "highlights": "Ubicación detectada en Hidalgo, Durango, México (25.864°, -104.659°). Altitud aproximada: 1834 m s.n.m..",
+      "logisticNotes": "Ubicación accesible para estudios de campo y validación de instrumentos.",
+      "climateData": {
+        "tMin": -9.94,
+        "tMax": 39.14,
+        "solar": 5.96,
+        "precip": 1.02,
+        "source": "NASA satélite (en vivo)"
+      },
+      "scores": {
+        "planetarySimilarity": 72.1,
+        "logisticViability": 84,
+        "missionReadinessScore": 76.3
+      },
+      "critique": {
+        "strongAnalogies": [
+          {
+            "dimension": "Tipo de roca y suelo",
+            "matchPct": 92,
+            "detail": "El tipo de roca coincide para probar taladros, recolección de muestras y sensores de minerales."
+          },
+          {
+            "dimension": "Luz y energía solar",
+            "matchPct": 87,
+            "detail": "La intensidad solar (5.96 kWh/m²/día) es adecuada para calibrar paneles solares de la misión."
+          }
+        ],
+        "analogyGaps": [
+          {
+            "dimension": "Cuevas y refugios",
+            "matchPct": 35,
+            "detail": "La misión se desarrolla en superficie abierta, por lo que el subsuelo no es prioridad."
+          },
+          {
+            "dimension": "Frío extremo",
+            "matchPct": 59,
+            "detail": "No alcanza el frío extremo de Cráter Shackleton (Polo Sur Lunar) (-180°C a -50°C), por lo que requiere cámaras térmicas."
+          }
+        ],
+        "planetaryLimitations": [
+          "Gravedad seis veces menor que en la Tierra: los vehículos y astronautas pesan mucho menos al desplazarse.",
+          "Ausencia total de aire (vacío): no existe viento ni sonido y el calor se disipa de forma distinta.",
+          "Polvo lunar afilado y cargado eléctricamente por la radiación directa del Sol."
+        ]
+      },
+      "radarComparison": {
+        "labels": [
+          "Frío extremo",
+          "Luz solar",
+          "Sequedad",
+          "Relieve",
+          "Tipo de roca",
+          "Cuevas"
+        ],
+        "targetValues": [
+          98,
+          85,
+          100,
+          88,
+          80,
+          20
+        ],
+        "earthValues": [
+          57,
+          72,
+          66,
+          51,
+          72,
+          85
+        ]
+      },
+      "userId": "user-1794622206911",
+      "savedAt": "13 nov 2026",
+      "matchedTargetName": "Cráter Shackleton (Polo Sur Lunar)",
+      "authorName": "Natalia Esparza",
+      "authorInstitution": "Universidad Politécnica de Durango"
+    }
+  ]
+}
+
+####################################################################
+ARCHIVO: nasa-analog-backend\data\earthCandidates.json
+####################################################################
+
+[
+  {
+    "id": "mx-el-elegante",
+    "name": "Cráter Maar El Elegante (Campo Volcánico Pinacate)",
+    "country": "México (Sonora)",
+    "category": "understudied",
+    "lat": 31.806,
+    "lon": -113.388,
+    "geologyType": "basaltic-volcanic",
+    "hasCaves": true,
+    "slopeIndex": 78,
+    "logisticViability": 92,
+    "logisticNotes": "Acceso directo por carretera federal, cercanía a aeropuertos (Mexicali/Phoenix) y bajo costo operativo.",
+    "highlights": "Cráter de colapso freatomagmático de 1.6 km de diámetro con capas de ceniza basáltica y tubos de lava adyacentes.",
+    "fallbackClimate": { "tMin": 6.5, "tMax": 38.0, "solar": 6.35, "precip": 0.35 }
+  },
+  {
+    "id": "mx-la-brena",
+    "name": "Campo Volcánico La Breña - El Jagüey (Maar)",
+    "country": "México (Durango)",
+    "category": "understudied",
+    "lat": 24.426,
+    "lon": -104.585,
+    "geologyType": "basaltic-volcanic",
+    "hasCaves": true,
+    "slopeIndex": 74,
+    "logisticViability": 94,
+    "logisticNotes": "A menos de 60 km de la ciudad de Durango y su aeropuerto; logística inmediata para equipos universitarios y agencias.",
+    "highlights": "Cráteres maar basálticos, derrames de lava escoriácea y cavidades volcánicas ideales para pruebas de rovers en terreno abrupto.",
+    "fallbackClimate": { "tMin": 3.8, "tMax": 29.5, "solar": 6.15, "precip": 1.35 }
+  },
+  {
+    "id": "mx-mapimi",
+    "name": "Playa Salina de Laguna del Rey (Bolsón de Mapimí)",
+    "country": "México (Durango / Coahuila)",
+    "category": "understudied",
+    "lat": 26.685,
+    "lon": -103.748,
+    "geologyType": "sedimentary-evaporite",
+    "hasCaves": false,
+    "slopeIndex": 28,
+    "logisticViability": 88,
+    "logisticNotes": "Cuenca endorreica accesible desde Torreón y Durango; perfecta para navegación autónoma de largo alcance.",
+    "highlights": "Costras evaporíticas, arcillas lacustres hiperáridas y alta radiación solar análoga a antiguos lagos marcianos.",
+    "fallbackClimate": { "tMin": 4.2, "tMax": 34.5, "solar": 6.10, "precip": 0.65 }
+  },
+  {
+    "id": "mx-suchiooc",
+    "name": "Tubos de Lava del Volcán Suchiooc (Chichinautzin)",
+    "country": "México (Morelos / CDMX)",
+    "category": "understudied",
+    "lat": 19.015,
+    "lon": -99.132,
+    "geologyType": "basaltic-volcanic",
+    "hasCaves": true,
+    "slopeIndex": 68,
+    "logisticViability": 95,
+    "logisticNotes": "A 90 minutos de centros de investigación y aeropuertos internacionales; despliegue rápido de instrumentación.",
+    "highlights": "Sistema extenso de tubos de lava basálticos con claraboyas de colapso para simular hábitats subterráneos lunares.",
+    "fallbackClimate": { "tMin": 5.8, "tMax": 22.0, "solar": 5.45, "precip": 2.40 }
+  },
+  {
+    "id": "ec-tayos",
+    "name": "Sistema Espeleológico Cueva de los Tayos",
+    "country": "Ecuador (Morona Santiago)",
+    "category": "understudied",
+    "lat": -3.051,
+    "lon": -78.203,
+    "geologyType": "sedimentary-evaporite",
+    "hasCaves": true,
+    "slopeIndex": 86,
+    "logisticViability": 58,
+    "logisticNotes": "Acceso por expedición fluvial y aérea local; ideal para entrenamiento de espeleología robótica en pozos verticales.",
+    "highlights": "Galeria subterránea monumental con tiros verticales profundos análogos a las claraboyas de Arsia Mons en Marte.",
+    "fallbackClimate": { "tMin": 16.5, "tMax": 27.0, "solar": 4.50, "precip": 6.80 }
+  },
+  {
+    "id": "ar-piedra-pomez",
+    "name": "Campo de Piedra Pómez y Volcán Carachi Pampa",
+    "country": "Argentina (Catamarca)",
+    "category": "understudied",
+    "lat": -26.591,
+    "lon": -67.495,
+    "geologyType": "basaltic-volcanic",
+    "hasCaves": false,
+    "slopeIndex": 64,
+    "logisticViability": 66,
+    "logisticNotes": "Accesible en vehículos 4x4 desde El Peñón; altitud de 3,200 m con baja densidad atmosférica.",
+    "highlights": "Megadunas de grava volcánica y regolito piroclástico moldeado por vientos extremos como en las planicies marcianas.",
+    "fallbackClimate": { "tMin": -3.2, "tMax": 19.5, "solar": 6.90, "precip": 0.25 }
+  },
+  {
+    "id": "ar-ischigualasto",
+    "name": "Cuenca Triásica de Ischigualasto (Valle de la Luna)",
+    "country": "Argentina (San Juan)",
+    "category": "understudied",
+    "lat": -30.163,
+    "lon": -67.842,
+    "geologyType": "sedimentary-evaporite",
+    "hasCaves": false,
+    "slopeIndex": 54,
+    "logisticViability": 82,
+    "logisticNotes": "Ruta pavimentada y estación científica en el parque; excelente para probar espectrómetros de biofirmas.",
+    "highlights": "Estratos sedimentarios fluvio-lacustres con arcillas y concreciones minerales comparables al delta de Jezero.",
+    "fallbackClimate": { "tMin": 2.5, "tMax": 31.0, "solar": 6.20, "precip": 0.40 }
+  },
+  {
+    "id": "et-dallol",
+    "name": "Sistema Hidrotermal y Salino de Dallol (Afar)",
+    "country": "Etiopía",
+    "category": "understudied",
+    "lat": 14.241,
+    "lon": 40.300,
+    "geologyType": "sedimentary-evaporite",
+    "hasCaves": false,
+    "slopeIndex": 45,
+    "logisticViability": 42,
+    "logisticNotes": "Zona remota de calor extremo; requiere escolta logística y ventanas de muestreo cortas.",
+    "highlights": "Salmueras hiperácidas y depósitos de sulfatos/cloruros que modelan ambientes hidrotermales del Marte primitivo.",
+    "fallbackClimate": { "tMin": 24.5, "tMax": 43.0, "solar": 6.75, "precip": 0.18 }
+  },
+  {
+    "id": "in-lonar",
+    "name": "Cráter de Impacto Lonar (Basaltos del Decán)",
+    "country": "India (Maharashtra)",
+    "category": "understudied",
+    "lat": 19.976,
+    "lon": 76.508,
+    "geologyType": "basaltic-volcanic",
+    "hasCaves": false,
+    "slopeIndex": 71,
+    "logisticViability": 84,
+    "logisticNotes": "Acceso carretero directo y alojamientos cercanos; uno de los pocos cráteres de impacto sobre roca basáltica.",
+    "highlights": "Cráter de impacto de 1.8 km excavado directamente en basalto volcánico, análogo estructural directo a cráteres lunares.",
+    "fallbackClimate": { "tMin": 14.0, "tMax": 36.5, "solar": 5.80, "precip": 2.10 }
+  },
+  {
+    "id": "bo-uyuni",
+    "name": "Salar de Uyuni y Desierto Siloli",
+    "country": "Bolivia",
+    "category": "understudied",
+    "lat": -20.133,
+    "lon": -67.489,
+    "geologyType": "sedimentary-evaporite",
+    "hasCaves": false,
+    "slopeIndex": 22,
+    "logisticViability": 72,
+    "logisticNotes": "Aeropuerto local en Uyuni; altitud de 3,656 m proporciona radiación UV elevada ideal para sensores ópticos.",
+    "highlights": "Costras salinas poligonales, oscilación térmica severa y radiación UV extrema.",
+    "fallbackClimate": { "tMin": -4.5, "tMax": 18.0, "solar": 6.85, "precip": 0.45 }
+  },
+  {
+    "id": "cl-atacama",
+    "name": "Sector Yungay (Desierto de Atacama)",
+    "country": "Chile",
+    "category": "benchmark",
+    "lat": -24.085,
+    "lon": -69.915,
+    "geologyType": "sedimentary-evaporite",
+    "hasCaves": false,
+    "slopeIndex": 48,
+    "logisticViability": 78,
+    "logisticNotes": "Benchmark clásico con infraestructura científica cerca de Antofagasta; requiere permisos ambientales.",
+    "highlights": "El desierto no polar más árido de la Tierra; referencia histórica para detección de vida microbiana en Marte.",
+    "fallbackClimate": { "tMin": 4.0, "tMax": 26.5, "solar": 7.15, "precip": 0.04 }
+  },
+  {
+    "id": "ca-haughton",
+    "name": "Cráter de Impacto Haughton (Isla Devon)",
+    "country": "Canadá (Nunavut)",
+    "category": "benchmark",
+    "lat": 75.375,
+    "lon": -89.680,
+    "geologyType": "permafrost-regolith",
+    "hasCaves": false,
+    "slopeIndex": 76,
+    "logisticViability": 28,
+    "logisticNotes": "Logística ártica extrema; requiere vuelos chárter desde Resolute Bay y ventanas cortas en verano.",
+    "highlights": "Cráter de impacto de 23 km en desierto polar con permafrost; benchmark estándar para misiones lunares y marcianas.",
+    "fallbackClimate": { "tMin": -34.0, "tMax": 4.5, "solar": 2.40, "precip": 0.42 }
+  },
+  {
+    "id": "aq-mcmurdo",
+    "name": "Valles Secos de McMurdo",
+    "country": "Antártida",
+    "category": "benchmark",
+    "lat": -77.466,
+    "lon": 162.516,
+    "geologyType": "permafrost-regolith",
+    "hasCaves": false,
+    "slopeIndex": 82,
+    "logisticViability": 15,
+    "logisticNotes": "Costo multimillonario y tratados antárticos estrictos; reservado para campañas de máxima prioridad.",
+    "highlights": "Temperaturas criogénicas, permafrost seco y ausencia casi total de precipitación líquida.",
+    "fallbackClimate": { "tMin": -38.5, "tMax": -5.0, "solar": 2.60, "precip": 0.08 }
+  },
+  {
+    "id": "us-mojave",
+    "name": "Dunas Kelso y Lavas Amboy (Mojave)",
+    "country": "Estados Unidos (California)",
+    "category": "benchmark",
+    "lat": 34.558,
+    "lon": -115.791,
+    "geologyType": "basaltic-volcanic",
+    "hasCaves": true,
+    "slopeIndex": 55,
+    "logisticViability": 95,
+    "logisticNotes": "Cercanía directa al JPL de la NASA en Pasadena; campo de pruebas estándar para rovers.",
+    "highlights": "Conos volcánicos, tubos de lava en Mojave National Preserve y abanicos aluviales áridos.",
+    "fallbackClimate": { "tMin": 5.0, "tMax": 39.5, "solar": 6.05, "precip": 0.30 }
+  },
+  {
+    "id": "es-teide",
+    "name": "Cueva del Viento y Las Cañadas del Teide",
+    "country": "España (Islas Canarias)",
+    "category": "benchmark",
+    "lat": 28.272,
+    "lon": -16.642,
+    "geologyType": "basaltic-volcanic",
+    "hasCaves": true,
+    "slopeIndex": 85,
+    "logisticViability": 86,
+    "logisticNotes": "Conectividad aérea europea directa y observatorios científicos adyacentes.",
+    "highlights": "Uno de los tubos volcánicos más largos del mundo junto a campos de regolito basáltico de alta montaña.",
+    "fallbackClimate": { "tMin": 1.5, "tMax": 19.5, "solar": 5.95, "precip": 0.85 }
+  },
+  {
+    "id": "is-krafla",
+    "name": "Campos Volcánicos de Krafla y Askja",
+    "country": "Islandia",
+    "category": "benchmark",
+    "lat": 65.715,
+    "lon": -16.728,
+    "geologyType": "basaltic-volcanic",
+    "hasCaves": true,
+    "slopeIndex": 84,
+    "logisticViability": 74,
+    "logisticNotes": "Buena red vial en verano, pero acceso restringido en invierno subártico.",
+    "highlights": "Basaltos subglaciales y tubos de lava utilizados para entrenar a los astronautas del programa Apollo.",
+    "fallbackClimate": { "tMin": -8.2, "tMax": 12.5, "solar": 2.75, "precip": 1.85 }
+  }
+]
+
+####################################################################
+ARCHIVO: nasa-analog-backend\data\spaceTargets.json
+####################################################################
+
+[
+  {
+    "id": "moon-shackleton",
+    "name": "Cráter Shackleton (Polo Sur Lunar)",
+    "celestialBody": "Luna",
+    "coordinates": "89.9° S, 0.0° E",
+    "missionObjective": "Extracción de hielo de agua en regiones permanentemente en sombra (PSR) y energía solar continua en los bordes del cráter.",
+    "requiredGeology": "anorthosite-regolith",
+    "requiresCaves": false,
+    "rawSpecs": {
+      "tempRange": "-180°C a -50°C",
+      "solarIrradiance": "Alta en picos / Nula en fondo",
+      "atmosphere": "Vacío ultra-alto",
+      "terrain": "Pendientes pronunciadas de 25°-30°"
+    },
+    "profile": {
+      "thermal": 98,
+      "radiation": 85,
+      "aridity": 100,
+      "topography": 88,
+      "geology": 80,
+      "subsurface": 20
+    }
+  },
+  {
+    "id": "moon-marius-hills",
+    "name": "Tubos de Lava de Marius Hills",
+    "celestialBody": "Luna",
+    "coordinates": "14.1° N, 56.8° W",
+    "missionObjective": "Construcción de hábitats subterráneos protegidos contra radiación cósmica y micrometeoritos.",
+    "requiredGeology": "basaltic-volcanic",
+    "requiresCaves": true,
+    "rawSpecs": {
+      "tempRange": "-20°C estable en subsuelo / -150°C a +110°C superficie",
+      "solarIrradiance": "Extrema en superficie",
+      "atmosphere": "Vacío",
+      "terrain": "Domos volcánicos y claraboyas de colapso"
+    },
+    "profile": {
+      "thermal": 65,
+      "radiation": 90,
+      "aridity": 100,
+      "topography": 75,
+      "geology": 95,
+      "subsurface": 100
+    }
+  },
+  {
+    "id": "moon-aristarchus",
+    "name": "Meseta de Aristarco",
+    "celestialBody": "Luna",
+    "coordinates": "23.7° N, 47.4° W",
+    "missionObjective": "Minería espacial (ISRU) de regolito rico en titanio, hierro y silicatos volcánicos.",
+    "requiredGeology": "basaltic-volcanic",
+    "requiresCaves": false,
+    "rawSpecs": {
+      "tempRange": "-160°C a +115°C",
+      "solarIrradiance": "Muy alta",
+      "atmosphere": "Vacío",
+      "terrain": "Meseta elevada y canales sinuosos"
+    },
+    "profile": {
+      "thermal": 70,
+      "radiation": 92,
+      "aridity": 100,
+      "topography": 65,
+      "geology": 92,
+      "subsurface": 30
+    }
+  },
+  {
+    "id": "mars-jezero",
+    "name": "Cráter Jezero (Delta Antiguo)",
+    "celestialBody": "Marte",
+    "coordinates": "18.38° N, 77.58° E",
+    "missionObjective": "Búsqueda de biofirmas fósiles en arcillas lacustres y pruebas de navegación autónoma de rovers.",
+    "requiredGeology": "sedimentary-evaporite",
+    "requiresCaves": false,
+    "rawSpecs": {
+      "tempRange": "-85°C a -10°C",
+      "solarIrradiance": "Moderada-Alta (polvo en suspensión)",
+      "atmosphere": "CO2 tenue (6 mbar)",
+      "terrain": "Abanico deltaico, rocas fracturadas y dunas"
+    },
+    "profile": {
+      "thermal": 82,
+      "radiation": 78,
+      "aridity": 96,
+      "topography": 60,
+      "geology": 90,
+      "subsurface": 15
+    }
+  },
+  {
+    "id": "mars-arsia-mons",
+    "name": "Cuevas de Flanco en Arsia Mons",
+    "celestialBody": "Marte",
+    "coordinates": "9.0° S, 120.0° W",
+    "missionObjective": "Exploración espeleológica robótica en claraboyas volcánicas con potencial astrobiológico.",
+    "requiredGeology": "basaltic-volcanic",
+    "requiresCaves": true,
+    "rawSpecs": {
+      "tempRange": "-95°C a -25°C",
+      "solarIrradiance": "Alta radiación UV",
+      "atmosphere": "Baja presión por gran altitud",
+      "terrain": "Laderas volcánicas escarpadas y pozos verticales"
+    },
+    "profile": {
+      "thermal": 86,
+      "radiation": 88,
+      "aridity": 98,
+      "topography": 90,
+      "geology": 96,
+      "subsurface": 100
+    }
+  },
+  {
+    "id": "mars-arcadia",
+    "name": "Arcadia Planitia (Hielo Subsuperficial)",
+    "celestialBody": "Marte",
+    "coordinates": "47.2° N, 184.3° E",
+    "missionObjective": "Aterrizaje de naves tripuladas en planicie lisa con acceso a glaciares enterrados a poca profundidad.",
+    "requiredGeology": "permafrost-regolith",
+    "requiresCaves": false,
+    "rawSpecs": {
+      "tempRange": "-100°C a -15°C",
+      "solarIrradiance": "Moderada",
+      "atmosphere": "CO2 tenue (7 mbar)",
+      "terrain": "Llanura volcánica suave de baja pendiente"
+    },
+    "profile": {
+      "thermal": 92,
+      "radiation": 68,
+      "aridity": 94,
+      "topography": 25,
+      "geology": 85,
+      "subsurface": 10
+    }
+  }
+]
+
+####################################################################
+ARCHIVO: nasa-analog-backend\package.json
+####################################################################
+
+{
+  "name": "nasa-analog-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.21.1",
+    "cors": "^2.8.6",
+    "express": "^5.3.0"
+  }
+}
+
+
+####################################################################
+ARCHIVO: nasa-analog-backend\server.js
+####################################################################
+
+const express = require('express');
+const cors = require('cors');
+const axios = require('axios');
+const fs = require('fs');
+const path = require('path');
+
+const spaceTargets = require('./data/spaceTargets.json');
+const earthCandidates = require('./data/earthCandidates.json');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(cors());
+app.use(express.json());
+
+// BASE DE DATOS PERSISTENTE
+const DB_FILE = path.join(__dirname, 'data', 'database.json');
+
+function initDB() {
+  if (!fs.existsSync(DB_FILE)) {
+    const initialData = {
+      users: [
+        {
+          id: 'user-demo-1',
+          name: 'Investigador invitado',
+          email: 'demo@terratwin.space',
+          password: 'demo',
+          institution: 'Laboratorio de Exploración Planetaria'
+        }
+      ],
+      discoveries: []
+    };
+    fs.writeFileSync(DB_FILE, JSON.stringify(initialData, null, 2), 'utf-8');
+  }
+}
+
+initDB();
+
+function readDB() {
+  try {
+    initDB();
+    const raw = fs.readFileSync(DB_FILE, 'utf-8');
+    const parsed = JSON.parse(raw);
+    return {
+      users: Array.isArray(parsed.users) ? parsed.users : [],
+      discoveries: Array.isArray(parsed.discoveries) ? parsed.discoveries : []
+    };
+  } catch {
+    return { users: [], discoveries: [] };
+  }
+}
+
+function writeDB(data) {
+  fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2), 'utf-8');
+}
+
+const nasaClimateCache = new Map();
+
+function clamp(value, min, max) {
+  return Math.max(min, Math.min(max, value));
+}
+
+// ENLACES DE GOOGLE MAPS
+function parseGoogleMapsOrCoords(rawInput) {
+  const text = rawInput.trim();
+
+  // 1. Pin exacto dentro de URL de Google Maps (!3dLAT!4dLON)
+  const exactPinMatch = text.match(/!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)/);
+  // 2. Centro de vista en URL de Google Maps (@LAT,LON)
+  const atCoordsMatch = text.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
+  // 3. Parámetro ?q=LAT,LON o ll=LAT,LON
+  const queryCoordsMatch = text.match(/[?&](?:q|ll)=(-?\d+\.\d+)(?:,|%2C)\s*(-?\d+\.\d+)/i);
+  // 4. Coordenadas escritas directamente: "24.0277, -104.6532"
+  const plainCoordsMatch = text.match(/^(-?\d{1,2}(?:\.\d+)?)\s*,\s*(-?\d{1,3}(?:\.\d+)?)$/);
+
+  const match = exactPinMatch || queryCoordsMatch || atCoordsMatch || plainCoordsMatch;
+  if (!match) return null;
+
+  const lat = Number(match[1]);
+  const lon = Number(match[2]);
+  if (Number.isNaN(lat) || Number.isNaN(lon) || Math.abs(lat) > 90 || Math.abs(lon) > 180) {
+    return null;
+  }
+
+  // Extraer nombre del lugar si viene en la URL (/place/Nombre+Del+Lugar/)
+  let extractedName = '';
+  const placeMatch = text.match(/\/place\/([^/@]+)/);
+  if (placeMatch && placeMatch[1]) {
+    try {
+      extractedName = decodeURIComponent(placeMatch[1].replace(/\+/g, ' ')).trim();
+    } catch {
+      extractedName = placeMatch[1].replace(/\+/g, ' ').trim();
+    }
+  }
+
+  return { lat, lon, extractedName };
+}
+
+// GEOCODIFICACIÓN INVERSA Y BÚSQUEDA MULTI-FUENTE
+async function reverseGeocodeCoords(lat, lon) {
+  try {
+    const response = await axios.get('https://nominatim.openstreetmap.org/reverse', {
+      params: {
+        format: 'jsonv2',
+        lat: lat.toFixed(5),
+        lon: lon.toFixed(5),
+        'accept-language': 'es'
+      },
+      headers: {
+        'User-Agent': 'TerraTwin-NASA-SpaceApps/3.1 (educational-project)'
+      },
+      timeout: 4500
+    });
+
+    const addr = response.data?.address || {};
+    const specificFeature =
+      response.data?.name ||
+      addr.natural ||
+      addr.volcano ||
+      addr.peak ||
+      addr.protected_area ||
+      addr.desert ||
+      '';
+
+    let city =
+      addr.city ||
+      addr.town ||
+      addr.village ||
+      addr.municipality ||
+      addr.county ||
+      addr.region ||
+      '';
+
+    if (city.toLowerCase().includes('victoria de durango')) {
+      city = 'Durango';
+    }
+
+    const state = addr.state || '';
+    const country = addr.country || '';
+
+    const parts = [specificFeature, city, state, country].filter(
+      (p, idx, arr) => p && arr.indexOf(p) === idx
+    );
+
+    if (parts.length > 0) {
+      return {
+        placeName: parts.slice(0, 3).join(', '),
+        regionSubtitle: [state, country].filter(Boolean).join(', ') || 'Coordenada satelital'
+      };
+    }
+
+    return {
+      placeName: `Sector (${lat.toFixed(4)}°, ${lon.toFixed(4)}°)`,
+      regionSubtitle: 'Coordenada satelital'
+    };
+  } catch {
+    return {
+      placeName: `Sector (${lat.toFixed(4)}°, ${lon.toFixed(4)}°)`,
+      regionSubtitle: 'Coordenada satelital'
+    };
+  }
+}
+
+async function fetchNasaPowerByCoords(lat, lon, cacheKey = null, fallback = null) {
+  if (cacheKey && nasaClimateCache.has(cacheKey)) {
+    return { ...nasaClimateCache.get(cacheKey), source: 'NASA satélite (caché)' };
+  }
+
+  try {
+    const url = 'https://power.larc.nasa.gov/api/temporal/climatology/point';
+    const response = await axios.get(url, {
+      params: {
+        parameters: 'T2M_MIN,T2M_MAX,ALLSKY_SFC_SW_DWN,PRECTOTCORR',
+        community: 'RE',
+        longitude: Number(lon.toFixed(4)),
+        latitude: Number(lat.toFixed(4)),
+        format: 'JSON'
+      },
+      timeout: 5000
+    });
+
+    const params = response.data?.properties?.parameter;
+    if (!params || !params.T2M_MIN || params.T2M_MIN.ANN === -999) {
+      throw new Error('Datos incompletos de NASA POWER');
+    }
+
+    const climateData = {
+      tMin: Number(params.T2M_MIN.ANN.toFixed(2)),
+      tMax: Number(params.T2M_MAX.ANN.toFixed(2)),
+      solar: Number(params.ALLSKY_SFC_SW_DWN.ANN.toFixed(2)),
+      precip: Number(params.PRECTOTCORR.ANN.toFixed(2))
+    };
+
+    if (cacheKey) {
+      nasaClimateCache.set(cacheKey, climateData);
+    }
+    return { ...climateData, source: 'NASA satélite (en vivo)' };
+  } catch {
+    if (fallback) {
+      return { ...fallback, source: 'Base científica local' };
+    }
+    const absLat = Math.abs(lat);
+    return {
+      tMin: Number((22 - absLat * 0.65).toFixed(1)),
+      tMax: Number((38 - absLat * 0.45).toFixed(1)),
+      solar: Number(clamp(6.8 - absLat * 0.05, 2.1, 7.2).toFixed(2)),
+      precip: 1.2,
+      source: 'Estimación orbital local'
+    };
+  }
+}
+
+async function fetchElevationByCoords(lat, lon) {
+  try {
+    const response = await axios.get('https://api.open-elevation.com/api/v1/lookup', {
+      params: { locations: `${lat.toFixed(4)},${lon.toFixed(4)}` },
+      timeout: 3000
+    });
+    const elev = response.data?.results?.[0]?.elevation;
+    return typeof elev === 'number' ? Math.round(elev) : null;
+  } catch {
+    return null;
+  }
+}
+
+function buildEarthNormalizedProfile(site, climate, target) {
+  const thermal = clamp(((30 - climate.tMin) / 70) * 100, 0, 100);
+  const radiation = clamp(((climate.solar - 2.0) / 5.5) * 100, 0, 100);
+  const aridity = clamp(((3.0 - Math.min(climate.precip, 3.0)) / 3.0) * 100, 0, 100);
+  const topography = clamp(site.slopeIndex, 0, 100);
+
+  let geology = 45;
+  if (site.geologyType === target.requiredGeology) {
+    geology = 95;
+  } else if (
+    (site.geologyType === 'basaltic-volcanic' && target.requiredGeology === 'anorthosite-regolith') ||
+    (site.geologyType === 'permafrost-regolith' && target.requiredGeology === 'anorthosite-regolith')
+  ) {
+    geology = 72;
+  }
+
+  let subsurface = 20;
+  if (target.requiresCaves) {
+    subsurface = site.hasCaves ? 98 : 10;
+  } else {
+    subsurface = site.hasCaves ? 65 : 85;
+  }
+
+  return {
+    thermal: Math.round(thermal),
+    radiation: Math.round(radiation),
+    aridity: Math.round(aridity),
+    topography: Math.round(topography),
+    geology: Math.round(geology),
+    subsurface: Math.round(subsurface)
+  };
+}
+
+function calculateSimilarity(targetProfile, earthProfile, weights) {
+  const dimensions = ['thermal', 'radiation', 'aridity', 'topography', 'geology', 'subsurface'];
+  let weightedErrorSum = 0;
+  let totalWeight = 0;
+
+  for (const dim of dimensions) {
+    const w = typeof weights[dim] === 'number' ? Math.max(0, weights[dim]) : 50;
+    const diff = Math.abs(targetProfile[dim] - earthProfile[dim]);
+    weightedErrorSum += w * diff;
+    totalWeight += w;
+  }
+
+  if (totalWeight === 0) {
+    totalWeight = dimensions.length;
+    weightedErrorSum = dimensions.reduce(
+      (acc, dim) => acc + Math.abs(targetProfile[dim] - earthProfile[dim]),
+      0
+    );
+  }
+
+  const meanWeightedDiff = weightedErrorSum / totalWeight;
+  return Number(clamp(100 - meanWeightedDiff, 0, 100).toFixed(1));
+}
+
+function generateScientificCritique(target, earthProfile, climate) {
+  const dimMeta = [
+    {
+      key: 'thermal',
+      name: 'Frío extremo',
+      strong: `Sus temperaturas mínimas (${climate.tMin} °C) permiten probar baterías y electrónica bajo estrés térmico.`,
+      weak: `No alcanza el frío extremo de ${target.name} (${target.rawSpecs.tempRange}), por lo que requiere cámaras térmicas.`
+    },
+    {
+      key: 'radiation',
+      name: 'Luz y energía solar',
+      strong: `La intensidad solar (${climate.solar} kWh/m²/día) es adecuada para calibrar paneles solares de la misión.`,
+      weak: `La cantidad de luz solar (${climate.solar} kWh/m²/día) difiere de la iluminación real en ${target.name}.`
+    },
+    {
+      key: 'aridity',
+      name: 'Sequedad del terreno',
+      strong: `La escasez de lluvia (${climate.precip} mm/día) mantiene el suelo seco y evita alteraciones por humedad.`,
+      weak: `Hay mayor presencia de lluvia (${climate.precip} mm/día) que en la superficie completamente seca de ${target.celestialBody}.`
+    },
+    {
+      key: 'topography',
+      name: 'Relieve e inclinación',
+      strong: `Las pendientes e irregularidades del terreno permiten probar tracción y navegación autónoma de rovers.`,
+      weak: `El relieve es distinto al terreno real de ${target.name} (${target.rawSpecs.terrain}).`
+    },
+    {
+      key: 'geology',
+      name: 'Tipo de roca y suelo',
+      strong: `El tipo de roca coincide para probar taladros, recolección de muestras y sensores de minerales.`,
+      weak: `La composición del suelo varía, por lo que conviene complementar con polvo simulado.`
+    },
+    {
+      key: 'subsurface',
+      name: 'Cuevas y refugios',
+      strong: `Cuenta con tubos volcánicos o cuevas reales para ensayar refugios contra radiación y comunicaciones subterráneas.`,
+      weak: target.requiresCaves
+        ? `No posee cuevas profundas para simular los refugios subterráneos de ${target.name}.`
+        : `La misión se desarrolla en superficie abierta, por lo que el subsuelo no es prioridad.`
+    }
+  ];
+
+  const rankedDims = dimMeta
+    .map((d) => ({
+      ...d,
+      diff: Math.abs(target.profile[d.key] - earthProfile[d.key]),
+      matchPct: 100 - Math.abs(target.profile[d.key] - earthProfile[d.key])
+    }))
+    .sort((a, b) => a.diff - b.diff);
+
+  const strongAnalogies = rankedDims.slice(0, 2).map((d) => ({
+    dimension: d.name,
+    matchPct: d.matchPct,
+    detail: d.strong
+  }));
+
+  const analogyGaps = rankedDims
+    .slice(-2)
+    .reverse()
+    .map((d) => ({
+      dimension: d.name,
+      matchPct: d.matchPct,
+      detail: d.weak
+    }));
+
+  const planetaryLimitations =
+    target.celestialBody === 'Luna'
+      ? [
+        'Gravedad seis veces menor que en la Tierra: los vehículos y astronautas pesan mucho menos al desplazarse.',
+        'Ausencia total de aire (vacío): no existe viento ni sonido y el calor se disipa de forma distinta.',
+        'Polvo lunar afilado y cargado eléctricamente por la radiación directa del Sol.'
+      ]
+      : [
+        'Gravedad reducida (38 % de la terrestre): cambia la forma en que los rovers perforan y se sostienen.',
+        'Atmósfera muy delgada de dióxido de carbono: los paracaídas y drones requieren diseños especiales.',
+        'Polvo fino oxidante y radiación ultravioleta constante en la superficie.'
+      ];
+
+  return {
+    strongAnalogies,
+    analogyGaps,
+    planetaryLimitations
+  };
+}
+
+// AUTENTICACIÓN DE USUARIOS
+app.post('/api/auth/register', (req, res) => {
+  const { name, email, password, institution } = req.body;
+  if (!name || !email || !password) {
+    return res.status(400).json({ error: 'Completa tu nombre, correo electrónico y contraseña.' });
+  }
+
+  const db = readDB();
+  const exists = db.users.find((u) => u.email.toLowerCase() === email.trim().toLowerCase());
+  if (exists) {
+    return res.status(400).json({ error: 'Ese correo ya está registrado. Inicia sesión con tu cuenta.' });
+  }
+
+  const newUser = {
+    id: `user-${Date.now()}`,
+    name: name.trim(),
+    email: email.trim().toLowerCase(),
+    password: password.trim(),
+    institution: (institution || 'Investigación independiente').trim()
+  };
+
+  db.users.push(newUser);
+  writeDB(db);
+
+  const { password: _, ...safeUser } = newUser;
+  res.json(safeUser);
+});
+
+app.post('/api/auth/login', (req, res) => {
+  const { email, password } = req.body;
+  if (!email || !password) {
+    return res.status(400).json({ error: 'Ingresa tu correo y contraseña.' });
+  }
+
+  const db = readDB();
+  const user = db.users.find(
+    (u) => u.email.toLowerCase() === email.trim().toLowerCase() && u.password === password.trim()
+  );
+
+  if (!user) {
+    return res.status(401).json({ error: 'Correo o contraseña incorrectos.' });
+  }
+
+  const { password: _, ...safeUser } = user;
+  res.json(safeUser);
+});
+
+app.post('/api/auth/demo', (req, res) => {
+  const db = readDB();
+  let demoUser = db.users.find((u) => u.id === 'user-demo-1');
+  if (!demoUser) {
+    demoUser = {
+      id: 'user-demo-1',
+      name: 'Investigador invitado',
+      email: 'demo@terratwin.space',
+      password: 'demo',
+      institution: 'Laboratorio de Exploración Planetaria'
+    };
+    db.users.push(demoUser);
+    writeDB(db);
+  }
+  const { password: _, ...safeUser } = demoUser;
+  res.json(safeUser);
+});
+
+// BUSCADOR DE UBICACIONES
+function translatePlaceCategory(rawType = '') {
+  const t = String(rawType).toLowerCase();
+  if (t.includes('volcano') || t.includes('peak') || t.includes('mountain')) return 'Formación volcánica / montaña';
+  if (t.includes('desert') || t.includes('natural') || t.includes('park') || t.includes('reserve')) return 'Área natural';
+  if (t.includes('city') || t.includes('town') || t.includes('municipality') || t.includes('locality')) return 'Ciudad / Municipio';
+  if (t.includes('village') || t.includes('hamlet')) return 'Localidad';
+  if (t.includes('university') || t.includes('college') || t.includes('school')) return 'Institución';
+  if (t.includes('admin') || t.includes('state') || t.includes('region')) return 'Región / Estado';
+  return 'Ubicación geográfica';
+}
+
+app.get('/api/geocode', async (req, res) => {
+  const q = req.query.q;
+  if (!q || typeof q !== 'string' || q.trim().length < 2) {
+    return res.status(400).json({ error: 'Escribe al menos 2 letras del lugar que deseas buscar.' });
+  }
+
+  const rawQuery = q.trim();
+
+  try {
+    // 3 geocodificadores para máxima velocidad y precisión
+    const [arcgisRes, openMeteoRes, photonRes] = await Promise.allSettled([
+      axios.get('https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates', {
+        params: {
+          SingleLine: rawQuery,
+          outFields: 'Match_addr,PlaceName,Region,Country,Type',
+          maxLocations: 7,
+          langCode: 'ES',
+          f: 'json'
+        },
+        timeout: 4500
+      }),
+      axios.get('https://geocoding-api.open-meteo.com/v1/search', {
+        params: {
+          name: rawQuery,
+          count: 7,
+          language: 'es',
+          format: 'json'
+        },
+        timeout: 4500
+      }),
+      axios.get('https://photon.komoot.io/api/', {
+        params: {
+          q: rawQuery,
+          limit: 6
+        },
+        timeout: 4500
+      })
+    ]);
+
+    const candidates = [];
+
+    const addCandidate = (name, subtitle, lat, lon, rawType) => {
+      if (typeof lat !== 'number' || typeof lon !== 'number' || Number.isNaN(lat) || Number.isNaN(lon)) {
+        return;
+      }
+      const cleanLat = Number(lat.toFixed(5));
+      const cleanLon = Number(lon.toFixed(5));
+      const isDuplicate = candidates.some(
+        (c) => Math.abs(c.lat - cleanLat) < 0.02 && Math.abs(c.lon - cleanLon) < 0.02
+      );
+      if (isDuplicate) return;
+
+      const cleanName = (name || rawQuery).trim();
+      const cleanSub = (subtitle || '').trim();
+      const fullName = cleanSub && !cleanName.includes(cleanSub)
+        ? `${cleanName}, ${cleanSub}`
+        : cleanName;
+
+      candidates.push({
+        name: cleanName,
+        subtitle: cleanSub || 'Coordenada global',
+        fullName,
+        lat: cleanLat,
+        lon: cleanLon,
+        type: translatePlaceCategory(rawType)
+      });
+    };
+
+    if (arcgisRes.status === 'fulfilled' && Array.isArray(arcgisRes.value.data?.candidates)) {
+      for (const item of arcgisRes.value.data.candidates) {
+        const attr = item.attributes || {};
+        const loc = item.location || {};
+        const placeName = attr.PlaceName || (attr.Match_addr ? attr.Match_addr.split(',')[0] : rawQuery);
+        const subParts = [attr.Region, attr.Country].filter(
+          (v, i, arr) => v && v !== placeName && arr.indexOf(v) === i
+        );
+        addCandidate(placeName, subParts.join(', '), loc.y, loc.x, attr.Type);
+      }
+    }
+
+    if (openMeteoRes.status === 'fulfilled' && Array.isArray(openMeteoRes.value.data?.results)) {
+      for (const item of openMeteoRes.value.data.results) {
+        const subParts = [item.admin1, item.country].filter(
+          (v, i, arr) => v && v !== item.name && arr.indexOf(v) === i
+        );
+        addCandidate(item.name, subParts.join(', '), item.latitude, item.longitude, item.feature_code);
+      }
+    }
+
+    if (photonRes.status === 'fulfilled' && Array.isArray(photonRes.value.data?.features)) {
+      for (const feat of photonRes.value.data.features) {
+        const props = feat.properties || {};
+        const coords = feat.geometry?.coordinates || [];
+        if (coords.length < 2) continue;
+        const primary = props.name || props.city || props.state || rawQuery;
+        const subParts = [props.city !== primary ? props.city : '', props.state, props.country].filter(
+          (v, i, arr) => v && v !== primary && arr.indexOf(v) === i
+        );
+        addCandidate(primary, subParts.join(', '), Number(coords[1]), Number(coords[0]), props.osm_value);
+      }
+    }
+
+    res.json({
+      query: rawQuery,
+      results: candidates.slice(0, 8)
+    });
+  } catch (err) {
+    console.error('Error en /api/geocode:', err.message);
+    res.status(500).json({ error: 'No se pudo consultar el servicio de ubicaciones.' });
+  }
+});
+
+//SIMULACIÓN Y PROSPECCIÓN NASA
+app.get('/api/health', (req, res) => {
+  const db = readDB();
+  res.json({
+    status: 'OK',
+    databaseFile: DB_FILE,
+    usersCount: db.users.length,
+    discoveriesCount: db.discoveries.length
+  });
+});
+
+app.get('/api/targets', (req, res) => {
+  res.json(spaceTargets);
+});
+
+app.post('/api/match', async (req, res) => {
+  try {
+    const { targetId, weights = {} } = req.body;
+    const target = spaceTargets.find((t) => t.id === targetId) || spaceTargets[0];
+
+    const evaluatedSites = await Promise.all(
+      earthCandidates.map(async (site) => {
+        const climate = await fetchNasaPowerByCoords(site.lat, site.lon, site.id, site.fallbackClimate);
+        const earthProfile = buildEarthNormalizedProfile(site, climate, target);
+        const planetarySimilarity = calculateSimilarity(target.profile, earthProfile, weights);
+
+        const missionReadinessScore = Number(
+          (planetarySimilarity * 0.65 + site.logisticViability * 0.35).toFixed(1)
+        );
+
+        return {
+          id: site.id,
+          name: site.name,
+          country: site.country,
+          category: site.category || 'understudied',
+          isCustom: false,
+          lat: site.lat,
+          lon: site.lon,
+          geologyType: site.geologyType,
+          hasCaves: site.hasCaves,
+          highlights: site.highlights,
+          logisticNotes: site.logisticNotes,
+          climateData: climate,
+          scores: {
+            planetarySimilarity,
+            logisticViability: site.logisticViability,
+            missionReadinessScore
+          },
+          critique: generateScientificCritique(target, earthProfile, climate),
+          radarComparison: {
+            labels: ['Frío extremo', 'Luz solar', 'Sequedad', 'Relieve', 'Tipo de roca', 'Cuevas'],
+            targetValues: [
+              target.profile.thermal,
+              target.profile.radiation,
+              target.profile.aridity,
+              target.profile.topography,
+              target.profile.geology,
+              target.profile.subsurface
+            ],
+            earthValues: [
+              earthProfile.thermal,
+              earthProfile.radiation,
+              earthProfile.aridity,
+              earthProfile.topography,
+              earthProfile.geology,
+              earthProfile.subsurface
+            ]
+          }
+        };
+      })
+    );
+
+    evaluatedSites.sort((a, b) => b.scores.planetarySimilarity - a.scores.planetarySimilarity);
+
+    res.json({
+      target,
+      totalAnalyzed: evaluatedSites.length,
+      results: evaluatedSites
+    });
+  } catch (error) {
+    console.error('Error en /api/match:', error);
+    res.status(500).json({ error: 'Error al procesar el análisis' });
+  }
+});
+
+app.post('/api/prospect', async (req, res) => {
+  try {
+    const {
+      lat,
+      lon,
+      targetId,
+      weights = {},
+      geologyType = 'basaltic-volcanic',
+      hasCaves = false,
+      preferredName = ''
+    } = req.body;
+
+    if (typeof lat !== 'number' || typeof lon !== 'number') {
+      return res.status(400).json({ error: 'Coordenadas inválidas' });
+    }
+
+    const target = spaceTargets.find((t) => t.id === targetId) || spaceTargets[0];
+
+    const [climate, elevation, geoInfo] = await Promise.all([
+      fetchNasaPowerByCoords(lat, lon),
+      fetchElevationByCoords(lat, lon),
+      reverseGeocodeCoords(lat, lon)
+    ]);
+
+    const finalPlaceName =
+      typeof preferredName === 'string' && preferredName.trim().length > 0
+        ? preferredName.trim()
+        : geoInfo.placeName;
+
+    const estimatedSlope =
+      elevation !== null ? clamp(Math.round(25 + (Math.abs(elevation) / 4500) * 65), 20, 90) : 55;
+
+    const customSite = {
+      id: `custom-${lat.toFixed(4)}-${lon.toFixed(4)}`,
+      name: finalPlaceName,
+      country:
+        elevation !== null
+          ? `${geoInfo.regionSubtitle} · Altitud: ${elevation} m`
+          : geoInfo.regionSubtitle,
+      category: 'custom',
+      isCustom: true,
+      lat: Number(lat.toFixed(5)),
+      lon: Number(lon.toFixed(5)),
+      geologyType,
+      hasCaves,
+      slopeIndex: estimatedSlope,
+      logisticViability: Math.abs(lat) > 65 ? 30 : 84
+    };
+
+    const earthProfile = buildEarthNormalizedProfile(customSite, climate, target);
+    const planetarySimilarity = calculateSimilarity(target.profile, earthProfile, weights);
+    const missionReadinessScore = Number(
+      (planetarySimilarity * 0.65 + customSite.logisticViability * 0.35).toFixed(1)
+    );
+
+    res.json({
+      ...customSite,
+      highlights: `Ubicación exacta en ${finalPlaceName} (${lat.toFixed(4)}°, ${lon.toFixed(
+        4
+      )}°). Altitud aproximada: ${elevation !== null ? elevation + ' m s.n.m.' : 'no disponible'}.`,
+      logisticNotes:
+        Math.abs(lat) > 65
+          ? 'Zona polar remota: requiere logística especializada.'
+          : 'Ubicación accesible para estudios de campo y validación de instrumentos.',
+      climateData: climate,
+      scores: {
+        planetarySimilarity,
+        logisticViability: customSite.logisticViability,
+        missionReadinessScore
+      },
+      critique: generateScientificCritique(target, earthProfile, climate),
+      radarComparison: {
+        labels: ['Frío extremo', 'Luz solar', 'Sequedad', 'Relieve', 'Tipo de roca', 'Cuevas'],
+        targetValues: [
+          target.profile.thermal,
+          target.profile.radiation,
+          target.profile.aridity,
+          target.profile.topography,
+          target.profile.geology,
+          target.profile.subsurface
+        ],
+        earthValues: [
+          earthProfile.thermal,
+          earthProfile.radiation,
+          earthProfile.aridity,
+          earthProfile.topography,
+          earthProfile.geology,
+          earthProfile.subsurface
+        ]
+      }
+    });
+  } catch (error) {
+    console.error('Error en /api/prospect:', error);
+    res.status(500).json({ error: 'Error al explorar la coordenada' });
+  }
+});
+
+// BASE DE DATOS PERSONALIZADA POR USUARIO
+app.get('/api/discoveries', (req, res) => {
+  const { userId } = req.query;
+  const db = readDB();
+
+  if (userId) {
+    const userRecords = db.discoveries.filter(
+      (item) => item.userId === userId || (!item.userId && userId === 'user-demo-1')
+    );
+    return res.json(userRecords);
+  }
+
+  res.json(db.discoveries);
+});
+
+app.post('/api/discoveries', (req, res) => {
+  const { site, targetName, customName, notes, user } = req.body;
+  if (!site) return res.status(400).json({ error: 'Faltan datos del sitio' });
+
+  const db = readDB();
+  const finalName = (customName && customName.trim()) || site.name;
+
+  const newRecord = {
+    ...site,
+    id: `db-${Date.now()}`,
+    userId: user?.id || 'user-demo-1',
+    name: finalName,
+    highlights: (notes && notes.trim()) || site.highlights,
+    savedAt: new Date().toLocaleDateString('es-MX', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    }),
+    matchedTargetName: targetName || 'Misión espacial',
+    authorName: user?.name || 'Investigador invitado',
+    authorInstitution: user?.institution || 'Terra-Twin Lab'
+  };
+
+  db.discoveries.unshift(newRecord);
+  writeDB(db);
+  res.json(newRecord);
+});
+
+app.delete('/api/discoveries/:id', (req, res) => {
+  const db = readDB();
+  db.discoveries = db.discoveries.filter((item) => item.id !== req.params.id);
+  writeDB(db);
+  res.json({ deleted: true });
+});
+
+app.listen(PORT, () => {
+  console.log(`Servidor Terra-Twin activo en http://localhost:${PORT}`);
+  console.log(`Base de datos persistente: ${DB_FILE}`);
+});
+
+####################################################################
+ARCHIVO: nasa-analog-frontend\angular.json
+####################################################################
+
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "cli": {
+    "packageManager": "npm",
+    "analytics": "ad4c6176-feb9-40cc-be5d-633d6e7b5e4b"
+  },
+  "newProjectRoot": "projects",
+  "projects": {
+    "nasa-analog-frontend": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "src/main.ts",
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "src/styles.css"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "nasa-analog-frontend:build:production"
+            },
+            "development": {
+              "buildTarget": "nasa-analog-frontend:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test"
+        }
+      }
+    }
+  }
+}
+
+
+####################################################################
+ARCHIVO: nasa-analog-frontend\package.json
+####################################################################
+
+{
+  "name": "nasa-analog-frontend",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "packageManager": "npm@11.19.0",
+  "dependencies": {
+    "@angular/common": "^22.2.0",
+    "@angular/compiler": "^22.2.0",
+    "@angular/core": "^22.2.0",
+    "@angular/forms": "^22.2.0",
+    "@angular/platform-browser": "^22.2.0",
+    "@angular/router": "^22.2.0",
+    "chart.js": "^4.6.1",
+    "leaflet": "^1.9.4",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^22.2.6",
+    "@angular/cli": "^22.2.6",
+    "@angular/compiler-cli": "^22.2.0",
+    "@types/leaflet": "^1.9.22",
+    "jsdom": "^30.0.0",
+    "prettier": "^3.8.1",
+    "typescript": "~6.0.2",
+    "vitest": "^5.0.0"
+  }
+}
+
+
+####################################################################
+ARCHIVO: nasa-analog-frontend\src\app\app.config.ts
+####################################################################
+
+import { ApplicationConfig, provideZonelessChangeDetection } from '@angular/core';
+import { provideHttpClient } from '@angular/common/http';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideZonelessChangeDetection(),
+    provideHttpClient()
+  ]
+};
+
+####################################################################
+ARCHIVO: nasa-analog-frontend\src\app\app.css
+####################################################################
+
+
+
+####################################################################
+ARCHIVO: nasa-analog-frontend\src\app\app.html
+####################################################################
+
+<app-dashboard></app-dashboard>
+
+####################################################################
+ARCHIVO: nasa-analog-frontend\src\app\app.spec.ts
+####################################################################
+
+import { TestBed } from '@angular/core/testing';
+import { App } from './app';
+
+describe('App', () => {
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [App],
+    })
+      .compileComponents();
+  });
+
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(App);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
+  });
+
+  it('should render title', async () => {
+    const fixture = TestBed.createComponent(App);
+    await fixture.whenStable();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, nasa-analog-frontend');
+  });
+});
+
+
+####################################################################
+ARCHIVO: nasa-analog-frontend\src\app\app.ts
+####################################################################
+
+import { Component } from '@angular/core';
+import { Dashboard } from './dashboard/dashboard';
+
+@Component({
+  selector: 'app-root',
+  imports: [Dashboard],
+  templateUrl: './app.html'
+})
+export class App {}
+
+####################################################################
+ARCHIVO: nasa-analog-frontend\src\app\dashboard\dashboard.css
+####################################################################
+
+/*PANTALLA DE ACCESO*/
+.auth-gate {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 80% 18%, rgba(225, 29, 72, 0.22), transparent 45%),
+    radial-gradient(circle at 15% 85%, rgba(56, 189, 248, 0.10), transparent 45%),
+    linear-gradient(160deg, #050507 0%, #0b0c10 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+}
+
+.auth-split {
+  width: 100%;
+  max-width: 1180px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.74rem;
+  color: #a1a1aa;
+  margin-bottom: 22px;
+}
+
+.red-beacon {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #ff2a4b;
+  box-shadow: 0 0 12px #ff2a4b;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.auth-showcase h1 {
+  font-size: 2.75rem;
+  line-height: 1.12;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.highlight-red {
+  color: #ff2a4b;
+  font-size: 3.1rem;
+}
+
+.lead-copy {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #a1a1aa;
+  margin-bottom: 30px;
+  max-width: 580px;
+}
+
+.feature-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pillar {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.03), transparent);
+  border-left: 2px solid #e11d48;
+}
+
+.pillar-num {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #facc15;
+  padding-top: 2px;
+}
+
+.pillar strong {
+  display: block;
+  font-size: 0.94rem;
+  color: #f4f4f6;
+  margin-bottom: 3px;
+}
+
+.pillar p {
+  font-size: 0.84rem;
+  color: #9ca3af;
+  line-height: 1.45;
+}
+
+/* Tarjeta de login / registro */
+.auth-card {
+  background: linear-gradient(180deg, #0d0e14 0%, #08090d 100%);
+  border: 1px solid rgba(225, 29, 72, 0.35);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  padding: 30px;
+}
+
+.auth-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #050507;
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid #1f2029;
+  margin-bottom: 22px;
+}
+
+.auth-tabs button {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  padding: 9px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auth-tabs button.active {
+  background: linear-gradient(135deg, #e11d48, #be123c);
+  color: #ffffff;
+}
+
+.auth-card h2 {
+  font-size: 1.35rem;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.auth-hint {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin-bottom: 20px;
+  line-height: 1.45;
+}
+
+.form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-block label {
+  font-size: 0.78rem;
+  color: #d4d4d8;
+  font-weight: 500;
+}
+
+.input-block input {
+  background: #050507;
+  border: 1px solid #27272f;
+  color: #ffffff;
+  padding: 11px 14px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease;
+}
+
+.input-block input:focus {
+  outline: none;
+  border-color: #ff2a4b;
+}
+
+.auth-alert {
+  background: rgba(225, 29, 72, 0.15);
+  border: 1px solid #e11d48;
+  color: #fda4af;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+}
+
+.demo-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 18px 0 14px;
+  color: #71717a;
+  font-size: 0.78rem;
+}
+
+.demo-divider::before,
+.demo-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #1f2029;
+}
+
+.demo-divider span {
+  padding: 0 12px;
+}
+
+/*BOTONES*/
+.btn-crimson {
+  background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 10px 18px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-crimson:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(255, 42, 75, 0.5);
+}
+
+.btn-outline-demo {
+  background: rgba(56, 189, 248, 0.08);
+  color: #7dd3fc;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  padding: 10px 18px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-demo:hover {
+  background: rgba(56, 189, 248, 0.16);
+  color: #ffffff;
+}
+
+.btn-secondary-dark {
+  background: #12131a;
+  color: #e4e4e7;
+  border: 1px solid #27272f;
+  padding: 9px 15px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 0.84rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.btn-secondary-dark:hover {
+  border-color: #38bdf8;
+  color: #ffffff;
+}
+
+.btn-danger-outline {
+  background: rgba(225, 29, 72, 0.1);
+  color: #fda4af;
+  border: 1px solid rgba(225, 29, 72, 0.4);
+  padding: 9px 15px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 0.84rem;
+  cursor: pointer;
+}
+
+.full-btn {
+  width: 100%;
+}
+
+/*PLATAFORMA*/
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at 90% 5%, rgba(225, 29, 72, 0.12), transparent 40%),
+    radial-gradient(circle at 5% 95%, rgba(56, 189, 248, 0.07), transparent 40%),
+    #050507;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  background: rgba(9, 10, 15, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand h1 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  color: #a1a1aa;
+}
+
+.nav-tabs {
+  display: flex;
+  background: #0b0c10;
+  padding: 4px;
+  border-radius: 11px;
+  border: 1px solid #1f2029;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: transparent;
+  color: #a1a1aa;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.84rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #e11d48, #be123c);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.35);
+}
+
+.user-session-pill {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #0b0c10;
+  border: 1px solid #1f2029;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.user-meta {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.user-meta strong {
+  font-size: 0.8rem;
+  color: #f4f4f6;
+}
+
+.user-meta span {
+  font-size: 0.7rem;
+  color: #71717a;
+}
+
+.btn-logout {
+  background: transparent;
+  border: 1px solid #27272f;
+  color: #fda4af;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  cursor: pointer;
+}
+
+.btn-logout:hover {
+  border-color: #e11d48;
+  color: #ffffff;
+}
+
+.error-banner {
+  background: rgba(225, 29, 72, 0.16);
+  border-bottom: 1px solid #e11d48;
+  color: #fecdd3;
+  padding: 10px 24px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.tab-view {
+  padding: 20px 28px;
+  flex: 1;
+}
+
+.kicker-tag {
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.69rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #facc15;
+  margin-bottom: 6px;
+}
+
+.surface-card {
+  background: linear-gradient(180deg, #0d0e14 0%, #090a0e 100%);
+  border: 1px solid #1f2029;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.surface-card h3 {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.micro-help {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+
+.accent-red {
+  color: #ff2a4b;
+}
+
+.accent-blue {
+  color: #38bdf8;
+}
+
+.accent-amber {
+  color: #facc15;
+}
+
+/*PESTAÑA 1: EXPLORADOR SATELITAL*/
+.explorer-layout {
+  display: grid;
+  grid-template-columns: 325px 1fr;
+  gap: 20px;
+}
+
+.control-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dark-select {
+  width: 100%;
+  background: #050507;
+  color: #ffffff;
+  border: 1px solid #27272f;
+  padding: 10px 12px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+.dark-select:focus {
+  outline: none;
+  border-color: #e11d48;
+}
+
+.mission-brief {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #1f2029;
+}
+
+.brief-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.pill-body {
+  background: rgba(56, 189, 248, 0.14);
+  color: #7dd3fc;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.pill-body.mars {
+  background: rgba(225, 29, 72, 0.18);
+  color: #fda4af;
+}
+
+.coord-muted {
+  font-size: 0.73rem;
+  color: #71717a;
+}
+
+.mission-brief p {
+  font-size: 0.82rem;
+  color: #d4d4d8;
+  line-height: 1.45;
+}
+
+.sliders-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.slider-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.81rem;
+  color: #e4e4e7;
+  margin-bottom: 3px;
+}
+
+input[type='range'] {
+  width: 100%;
+  accent-color: #e11d48;
+  cursor: pointer;
+}
+
+/* Escenario del mapa */
+.map-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.map-toolbar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-box {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+  min-width: 260px;
+}
+
+.search-input {
+  flex: 1;
+  background: #0b0c10;
+  border: 1px solid #27272f;
+  color: #ffffff;
+  padding: 9px 14px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+.tool-btn {
+  background: #0b0c10;
+  color: #d4d4d8;
+  border: 1px solid #27272f;
+  padding: 9px 14px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tool-btn.red-active {
+  background: rgba(225, 29, 72, 0.16);
+  border-color: #e11d48;
+  color: #ffffff;
+}
+
+.tool-btn.blue-active {
+  background: rgba(56, 189, 248, 0.16);
+  border-color: #38bdf8;
+  color: #ffffff;
+}
+
+.prospect-drawer {
+  background: linear-gradient(90deg, rgba(225, 29, 72, 0.12), rgba(13, 14, 20, 0.9));
+  border: 1px solid rgba(225, 29, 72, 0.35);
+  border-radius: 10px;
+  padding: 9px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.82rem;
+  color: #e4e4e7;
+  flex-wrap: wrap;
+}
+
+.mini-input {
+  background: #050507;
+  color: #ffffff;
+  border: 1px solid #3f3f46;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.pulse-amber {
+  color: #facc15;
+  font-weight: 600;
+}
+
+.map-container-box {
+  position: relative;
+  height: 365px;
+  min-height: 365px;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #27272f;
+}
+
+.map-container-box.crosshair .leaflet-container {
+  cursor: crosshair !important;
+}
+
+.leaflet-canvas {
+  height: 365px;
+  min-height: 365px;
+  width: 100%;
+  z-index: 1;
+}
+
+.map-legend {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  z-index: 500;
+  background: rgba(5, 5, 7, 0.9);
+  border: 1px solid #27272f;
+  padding: 6px 14px;
+  border-radius: 999px;
+  display: flex;
+  gap: 14px;
+  font-size: 0.74rem;
+  color: #d4d4d8;
+}
+
+.dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.dot.red {
+  background: #ff2a4b;
+}
+
+.dot.amber {
+  background: #facc15;
+}
+
+.dot.blue {
+  background: #38bdf8;
+}
+
+/* Ficha editable inferior */
+.selected-spotlight {
+  background: linear-gradient(180deg, #0d0e14 0%, #08090d 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.spotlight-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.region-label {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+.spotlight-main h2 {
+  font-size: 1.25rem;
+  margin: 2px 0 4px;
+  color: #ffffff;
+}
+
+.spot-desc {
+  font-size: 0.85rem;
+  color: #a1a1aa;
+  max-width: 620px;
+  line-height: 1.45;
+}
+
+.kpi-group {
+  display: flex;
+  gap: 8px;
+}
+
+.kpi-card {
+  background: #050507;
+  border: 1px solid #1f2029;
+  padding: 9px 13px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 105px;
+}
+
+.kpi-card.red-border {
+  border-color: rgba(225, 29, 72, 0.45);
+}
+
+.kpi-card span {
+  display: block;
+  font-size: 0.72rem;
+  color: #9ca3af;
+  margin-bottom: 2px;
+}
+
+.kpi-card strong {
+  font-size: 1.08rem;
+}
+
+.edit-save-panel {
+  padding-top: 14px;
+  border-top: 1px solid #1f2029;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.edit-fields {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 260px;
+}
+
+.field-group.grow {
+  flex: 1;
+}
+
+.field-group label {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.name-input {
+  background: #050507;
+  border: 1px solid #27272f;
+  color: #ffffff;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+.name-input:focus {
+  outline: none;
+  border-color: #e11d48;
+}
+
+.action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.save-cluster {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.saved-msg {
+  font-size: 0.82rem;
+  color: #facc15;
+  font-weight: 600;
+}
+
+/*VISOR ORBITAL (LUNA / MARTE VS TIERRA)*/
+.orbital-dual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+.orbital-card {
+  background: linear-gradient(180deg, #0d0e14 0%, #08090d 100%);
+  border: 1px solid #1f2029;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.orbital-card.planet-border {
+  border-top: 2px solid #e11d48;
+}
+
+.orbital-card.earth-border {
+  border-top: 2px solid #38bdf8;
+}
+
+.orbital-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  gap: 12px;
+}
+
+.orbital-badge {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.orbital-badge.red {
+  background: rgba(225, 29, 72, 0.16);
+  color: #fda4af;
+}
+
+.orbital-badge.blue {
+  background: rgba(56, 189, 248, 0.14);
+  color: #7dd3fc;
+}
+
+.orbital-header h3 {
+  font-size: 1.05rem;
+  color: #ffffff;
+}
+
+.btn-mini-recenter {
+  background: #050507;
+  color: #d4d4d8;
+  border: 1px solid #27272f;
+  padding: 6px 11px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 0.76rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-mini-recenter:hover {
+  border-color: #facc15;
+  color: #ffffff;
+}
+
+.orbital-map-frame {
+  position: relative;
+  height: 280px;
+  min-height: 280px;
+  width: 100%;
+  background: #030305;
+  border-top: 1px solid #1f2029;
+  border-bottom: 1px solid #1f2029;
+}
+
+.orbital-leaflet {
+  height: 280px;
+  min-height: 280px;
+  width: 100%;
+  background: #030305;
+  z-index: 1;
+}
+
+.orbital-hud {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 500;
+  background: rgba(5, 5, 7, 0.88);
+  border: 1px solid #27272f;
+  padding: 5px 12px;
+  border-radius: 6px;
+  display: flex;
+  gap: 14px;
+  font-size: 0.7rem;
+  color: #e4e4e7;
+}
+
+.orbital-specs-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 12px 18px;
+  background: #07080b;
+}
+
+.orbital-specs-bar span {
+  display: block;
+  font-size: 0.7rem;
+  color: #9ca3af;
+}
+
+.orbital-specs-bar strong {
+  font-size: 0.8rem;
+  color: #f4f4f6;
+}
+
+/* Retícula orbital sobre el objetivo lunar o marciano */
+.orbital-reticle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #ff2a4b;
+  background: rgba(255, 42, 75, 0.18);
+  box-shadow: 0 0 16px rgba(255, 42, 75, 0.9);
+  position: relative;
+}
+
+.orbital-reticle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: #facc15;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Barra rápida de cambio de destino espacial */
+.orbital-switcher-bar {
+  background: #0b0c10;
+  border: 1px solid #1f2029;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.orbital-switcher-bar>span {
+  font-size: 0.72rem;
+  color: #facc15;
+  font-weight: 600;
+}
+
+.target-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.target-chips button {
+  background: #050507;
+  color: #a1a1aa;
+  border: 1px solid #27272f;
+  padding: 6px 11px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.target-chips button:hover {
+  border-color: #e11d48;
+  color: #ffffff;
+}
+
+.target-chips button.active {
+  background: rgba(225, 29, 72, 0.18);
+  border-color: #e11d48;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/*PESTAÑAS 2, 3 Y 4: DIAGNÓSTICO, RANKING Y BASE DE DATOS*/
+.section-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #1f2029;
+}
+
+.section-banner h2 {
+  font-size: 1.55rem;
+  color: #ffffff;
+}
+
+.section-intro {
+  font-size: 0.88rem;
+  color: #9ca3af;
+  max-width: 720px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+.analysis-btns,
+.filter-pills {
+  display: flex;
+  gap: 8px;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 20px;
+}
+
+.radar-wrapper {
+  height: 300px;
+  position: relative;
+}
+
+.climate-boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.c-box {
+  background: #050507;
+  border: 1px solid #1f2029;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.c-box span {
+  display: block;
+  font-size: 0.72rem;
+  color: #9ca3af;
+  margin-bottom: 2px;
+}
+
+.c-box strong {
+  font-size: 0.92rem;
+}
+
+.critique-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.diag-card {
+  background: #0b0c10;
+  border: 1px solid #1f2029;
+  border-radius: 12px;
+  padding: 16px 20px;
+  border-left: 3px solid #38bdf8;
+}
+
+.diag-card.strength {
+  border-left-color: #38bdf8;
+}
+
+.diag-card.gap {
+  border-left-color: #e11d48;
+}
+
+.diag-card.limit {
+  border-left-color: #facc15;
+}
+
+.diag-card.logistics-card {
+  border-left-color: #71717a;
+}
+
+.diag-card h3 {
+  font-size: 0.98rem;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.diag-card ul {
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.86rem;
+  color: #d4d4d8;
+  line-height: 1.45;
+}
+
+.diag-card p {
+  font-size: 0.86rem;
+  color: #d4d4d8;
+  line-height: 1.45;
+}
+
+.filter-pills button {
+  background: #0b0c10;
+  color: #9ca3af;
+  border: 1px solid #27272f;
+  padding: 8px 15px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.filter-pills button.active {
+  background: #e11d48;
+  border-color: #e11d48;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 16px;
+}
+
+.site-grid-card {
+  background: linear-gradient(180deg, #0d0e14 0%, #08090d 100%);
+  border: 1px solid #1f2029;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.site-grid-card.selected-card {
+  border-color: #e11d48;
+}
+
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rank-pill {
+  background: rgba(225, 29, 72, 0.16);
+  color: #ff2a4b;
+  border: 1px solid rgba(225, 29, 72, 0.35);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 6px;
+}
+
+.cat-badge {
+  font-size: 0.73rem;
+  color: #7dd3fc;
+  background: rgba(56, 189, 248, 0.12);
+  padding: 3px 9px;
+  border-radius: 6px;
+}
+
+.cat-badge.amber {
+  color: #fde047;
+  background: rgba(250, 204, 21, 0.12);
+}
+
+.country-sub {
+  font-size: 0.78rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.card-desc {
+  font-size: 0.84rem;
+  color: #d4d4d8;
+  line-height: 1.45;
+}
+
+.card-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #050507;
+  border: 1px solid #1f2029;
+  border-radius: 10px;
+  padding: 9px;
+  text-align: center;
+}
+
+.card-metrics span {
+  display: block;
+  font-size: 0.7rem;
+  color: #9ca3af;
+}
+
+.card-metrics strong {
+  font-size: 0.96rem;
+}
+
+.card-footer-btns {
+  display: flex;
+  gap: 8px;
+}
+
+.card-footer-btns button {
+  flex: 1;
+}
+
+.empty-db {
+  text-align: center;
+  padding: 60px 24px;
+  background: #0b0c10;
+  border: 1px dashed #27272f;
+  border-radius: 14px;
+}
+
+.empty-db h3 {
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.empty-db p {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+@media (max-width: 980px) {
+
+  .auth-split,
+  .explorer-layout,
+  .analysis-grid,
+  .orbital-dual-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-showcase h1 {
+    font-size: 2.1rem;
+  }
+}
+
+@media print {
+
+  .orbital-dual-grid,
+  .orbital-switcher-bar {
+    display: none !important;
+  }
+}
+
+/*BUSCADOR CON SUGERENCIAS*/
+.search-input-wrap {
+  position: relative;
+  flex: 1;
+  display: flex;
+}
+
+.search-input-wrap .search-input {
+  width: 100%;
+}
+
+.search-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 1200;
+  background: #0b0c10;
+  border: 1px solid rgba(225, 29, 72, 0.5);
+  border-radius: 11px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.92);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestion-item {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #1f2029;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background: rgba(225, 29, 72, 0.16);
+}
+
+.sug-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.sug-main strong {
+  font-size: 0.85rem;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sug-main span {
+  font-size: 0.74rem;
+  color: #9ca3af;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sug-coords {
+  font-size: 0.72rem;
+  color: #38bdf8;
+  white-space: nowrap;
+}
+
+/*BUSCADOR MUNDIAL DE UBICACIONES POR NOMBRE*/
+.search-input-wrap {
+  position: relative;
+  flex: 1;
+  display: flex;
+}
+
+.search-input-wrap .search-input {
+  width: 100%;
+}
+
+.search-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  background: #0b0c10;
+  border: 1px solid #e11d48;
+  border-radius: 12px;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.95);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 14px;
+  background: #050507;
+  border-bottom: 1px solid #1f2029;
+  font-size: 0.74rem;
+  color: #facc15;
+  font-weight: 500;
+}
+
+.btn-close-drop {
+  background: transparent;
+  border: 1px solid #27272f;
+  color: #a1a1aa;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.btn-close-drop:hover {
+  color: #ffffff;
+  border-color: #e11d48;
+}
+
+.dropdown-empty {
+  padding: 14px;
+  font-size: 0.82rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
+.suggestion-item {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #1f2029;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background: rgba(225, 29, 72, 0.18);
+}
+
+.sug-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.sug-main strong {
+  font-size: 0.88rem;
+  color: #ffffff;
+}
+
+.sug-main span {
+  font-size: 0.76rem;
+  color: #9ca3af;
+}
+
+.sug-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.sug-coords {
+  font-size: 0.72rem;
+  color: #38bdf8;
+}
+
+.sug-action {
+  font-size: 0.7rem;
+  color: #fda4af;
+  font-weight: 600;
+}
+
+####################################################################
+ARCHIVO: nasa-analog-frontend\src\app\dashboard\dashboard.html
+####################################################################
+
+<!-- PANTALLA DE ACCESO-->
+
+<div class="auth-gate" *ngIf="!currentUser">
+  <div class="auth-split">
+    <div class="auth-showcase">
+      <div class="brand-mark">
+        <span class="red-beacon"></span>
+        <span class="font-mono">TERRA-TWIN · PROGRAMA DE PROSPECCIÓN PLANETARIA</span>
+      </div>
+
+      <h1>
+        Encuentra en la Tierra los entornos más cercanos a la
+        <span class="editorial-italic highlight-red">Luna y Marte.</span>
+      </h1>
+
+      <p class="lead-copy">
+        Antes de enviar rovers, trajes o módulos habitables al espacio, los ingenieros necesitan probarlos en lugares
+        terrestres con clima, relieve y geología equivalentes. Esta plataforma cruza mediciones satelitales de la NASA
+        en tiempo real para descubrir y documentar nuevos sitios análogos.
+      </p>
+
+      <div class="feature-pillars">
+        <div class="pillar">
+          <span class="pillar-num font-mono">01</span>
+          <div>
+            <strong>Exploración satelital libre</strong>
+            <p>Busca cualquier ciudad o toca un punto del mapa para evaluar su clima y altitud al instante.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num font-mono">02</span>
+          <div>
+            <strong>Visor orbital comparativo</strong>
+            <p>Observa lado a lado la superficie real de la Luna o Marte desde órbita frente al terreno elegido en la
+              Tierra.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num font-mono">03</span>
+          <div>
+            <strong>Base de datos personalizada</strong>
+            <p>Cada cuenta conserva su propio registro de ubicaciones descubiertas y anotaciones de campo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="auth-card-wrapper">
+      <div class="auth-card">
+        <div class="auth-tabs">
+          <button [class.active]="authMode === 'login'" (click)="switchAuthMode('login')">
+            Iniciar sesión
+          </button>
+          <button [class.active]="authMode === 'register'" (click)="switchAuthMode('register')">
+            Crear cuenta
+          </button>
+        </div>
+
+        <h2>
+          {{ authMode === 'login' ? 'Accede a tu espacio de trabajo' : 'Registra tu cuenta de investigador' }}
+        </h2>
+        <p class="auth-hint">
+          {{
+          authMode === 'login'
+          ? 'Ingresa con tu correo para cargar tus sitios guardados.'
+          : 'Crea un perfil para almacenar tus propios hallazgos en la base de datos.'
+          }}
+        </p>
+
+        <div class="form-stack">
+          <div class="input-block" *ngIf="authMode === 'register'">
+            <label>Nombre completo</label>
+            <input type="text" [(ngModel)]="authName" placeholder="Ej. Natalia Esparza" />
+          </div>
+
+          <div class="input-block">
+            <label>Correo electrónico</label>
+            <input type="email" [(ngModel)]="authEmail" (keyup.enter)="submitAuth()"
+              placeholder="nombre@institucion.edu" />
+          </div>
+
+          <div class="input-block">
+            <label>Contraseña</label>
+            <input type="password" [(ngModel)]="authPassword" (keyup.enter)="submitAuth()" placeholder="••••••••" />
+          </div>
+
+          <div class="input-block" *ngIf="authMode === 'register'">
+            <label>Universidad, laboratorio o equipo (opcional)</label>
+            <input type="text" [(ngModel)]="authInstitution" (keyup.enter)="submitAuth()"
+              placeholder="Ej. Instituto Tecnológico de Durango" />
+          </div>
+
+          <div class="auth-alert" *ngIf="authError">
+            {{ authError }}
+          </div>
+
+          <button class="btn-crimson full-btn" (click)="submitAuth()" [disabled]="isAuthenticating">
+            {{
+            isAuthenticating
+            ? 'Verificando acceso...'
+            : authMode === 'login'
+            ? 'Entrar a la plataforma'
+            : 'Crear cuenta y entrar'
+            }}
+          </button>
+        </div>
+
+        <div class="demo-divider">
+          <span>o explora sin registrarte</span>
+        </div>
+
+        <button class="btn-outline-demo full-btn" (click)="enterDemoMode()" [disabled]="isAuthenticating">
+          Probar la versión demo
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PLATAFORMA PRINCIPAL-->
+<div class="app-shell" *ngIf="currentUser">
+  <header class="top-bar">
+    <div class="brand">
+      <span class="red-beacon"></span>
+      <div>
+        <h1>TERRA-TWIN</h1>
+        <p class="subtitle">Prospección de análogos terrestres · <span class="editorial-italic">Luna y Marte</span></p>
+      </div>
+    </div>
+
+    <nav class="nav-tabs">
+      <button class="tab-btn" [class.active]="activeTab === 'explorer'" (click)="setTab('explorer')">
+        Explorador satelital
+      </button>
+      <button class="tab-btn" [class.active]="activeTab === 'analysis'" (click)="setTab('analysis')">
+        Comparativa y diagnóstico
+      </button>
+      <button class="tab-btn" [class.active]="activeTab === 'ranking'" (click)="setTab('ranking')">
+        Ranking de candidatos ({{ results.length }})
+      </button>
+      <button class="tab-btn" [class.active]="activeTab === 'database'" (click)="setTab('database')">
+        Mi base de datos ({{ savedDiscoveries.length }})
+      </button>
+    </nav>
+
+    <div class="user-session-pill">
+      <div class="user-meta">
+        <strong>{{ currentUser.name }}</strong>
+        <span>{{ currentUser.institution }}</span>
+      </div>
+      <button class="btn-logout" (click)="logout()">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <div class="error-banner" *ngIf="errorMessage">
+    {{ errorMessage }}
+  </div>
+
+  <!-- PESTAÑA 1: EXPLORADOR SATELITAL Y MAPA-->
+  <div class="tab-view explorer-layout" [hidden]="activeTab !== 'explorer'">
+    <aside class="control-sidebar">
+      <div class="surface-card">
+        <span class="kicker-tag">PASO 01 · DESTINO ESPACIAL</span>
+        <h3>Selecciona la zona fuera de la Tierra</h3>
+        <p class="micro-help">Elige el cráter o región lunar o marciana que deseas simular.</p>
+
+        <select class="dark-select" [(ngModel)]="selectedTargetId" (change)="onTargetChange()">
+          <option *ngFor="let t of targets" [value]="t.id">
+            {{ t.celestialBody }} — {{ t.name }}
+          </option>
+        </select>
+
+        <div class="mission-brief" *ngIf="activeTarget">
+          <div class="brief-head">
+            <span class="pill-body" [class.mars]="activeTarget.celestialBody === 'Marte'">
+              {{ activeTarget.celestialBody }}
+            </span>
+            <span class="font-mono coord-muted">{{ activeTarget.coordinates }}</span>
+          </div>
+          <p>{{ activeTarget.missionObjective }}</p>
+        </div>
+      </div>
+
+      <div class="surface-card">
+        <span class="kicker-tag">PASO 02 · PRIORIDADES DE MISIÓN</span>
+        <h3>Ajusta qué factores importan más</h3>
+        <p class="micro-help">
+          Sube al 100 % lo que tu misión necesita probar; baja a 0 % lo que no es relevante. El ranking se recalcula al
+          instante.
+        </p>
+
+        <div class="sliders-stack">
+          <div class="slider-row">
+            <div class="slider-head"><span>Frío extremo</span><strong class="font-mono accent-blue">{{ weights.thermal
+                }} %</strong></div>
+            <input type="range" min="0" max="100" [(ngModel)]="weights.thermal" (change)="runSimulation()" />
+          </div>
+          <div class="slider-row">
+            <div class="slider-head"><span>Luz y radiación solar</span><strong class="font-mono accent-blue">{{
+                weights.radiation }} %</strong></div>
+            <input type="range" min="0" max="100" [(ngModel)]="weights.radiation" (change)="runSimulation()" />
+          </div>
+          <div class="slider-row">
+            <div class="slider-head"><span>Sequedad del terreno</span><strong class="font-mono accent-blue">{{
+                weights.aridity }} %</strong></div>
+            <input type="range" min="0" max="100" [(ngModel)]="weights.aridity" (change)="runSimulation()" />
+          </div>
+          <div class="slider-row">
+            <div class="slider-head"><span>Relieve e inclinación</span><strong class="font-mono accent-blue">{{
+                weights.topography }} %</strong></div>
+            <input type="range" min="0" max="100" [(ngModel)]="weights.topography" (change)="runSimulation()" />
+          </div>
+          <div class="slider-row">
+            <div class="slider-head"><span>Tipo de roca y suelo</span><strong class="font-mono accent-blue">{{
+                weights.geology }} %</strong></div>
+            <input type="range" min="0" max="100" [(ngModel)]="weights.geology" (change)="runSimulation()" />
+          </div>
+          <div class="slider-row">
+            <div class="slider-head"><span>Cuevas y refugios</span><strong class="font-mono accent-blue">{{
+                weights.subsurface }} %</strong></div>
+            <input type="range" min="0" max="100" [(ngModel)]="weights.subsurface" (change)="runSimulation()" />
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="map-stage">
+      <div class="map-toolbar">
+        <div class="search-box">
+          <div class="search-input-wrap">
+            <input type="text" class="search-input" [(ngModel)]="searchQuery" (input)="onSearchInputChange()"
+              (keyup.enter)="searchLocationByText()"
+              placeholder="Busca cualquier lugar del mundo por nombre (ej. Durango, Atacama, Monte Teide)..." />
+
+            <div class="search-dropdown" *ngIf="searchDropdownOpen">
+              <div class="dropdown-header">
+                <span>
+                  {{
+                  isSearchingPlace
+                  ? 'Buscando ubicaciones en el mundo...'
+                  : searchSuggestions.length > 0
+                  ? 'Selecciona la ubicación exacta para marcarla en el mapa:'
+                  : 'Sin coincidencias'
+                  }}
+                </span>
+                <button type="button" class="btn-close-drop" (click)="closeSearchDropdown()">Cerrar</button>
+              </div>
+
+              <div class="dropdown-empty" *ngIf="!isSearchingPlace && searchNoResults">
+                No se encontraron lugares con "{{ searchQuery }}". Intenta agregar el país o estado.
+              </div>
+
+              <button type="button" class="suggestion-item" *ngFor="let item of searchSuggestions"
+                (click)="selectSearchSuggestion(item)">
+                <div class="sug-main">
+                  <strong>{{ item.name }}</strong>
+                  <span>{{ item.subtitle }} · {{ item.type }}</span>
+                </div>
+                <div class="sug-right">
+                  <span class="sug-coords font-mono">{{ item.lat }}°, {{ item.lon }}°</span>
+                  <span class="sug-action">Ubicar punto</span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <button class="btn-secondary-dark" (click)="searchLocationByText()" [disabled]="isSearchingPlace">
+            {{ isSearchingPlace ? 'Buscando...' : 'Buscar' }}
+          </button>
+        </div>
+
+        <button class="tool-btn" [class.red-active]="prospectMode" (click)="toggleProspectMode()">
+          {{ prospectMode ? 'Selección libre en mapa activa' : 'Activar clic en mapa' }}
+        </button>
+
+        <button class="tool-btn" [class.blue-active]="showNasaGibsLayer" (click)="toggleNasaGibs()">
+          Capa satelital NASA
+        </button>
+      </div>
+
+      <div class="prospect-drawer" *ngIf="prospectMode">
+        <span>Haz clic sobre cualquier región del mapa para detectar su nombre real y consultar su clima en la
+          NASA:</span>
+        <select class="mini-input" [(ngModel)]="prospectGeology">
+          <option value="basaltic-volcanic">Roca volcánica o basalto</option>
+          <option value="sedimentary-evaporite">Desierto, salina o arcilla</option>
+          <option value="permafrost-regolith">Zona polar o hielo</option>
+          <option value="anorthosite-regolith">Roca cristalina</option>
+        </select>
+        <label class="check-item">
+          <input type="checkbox" [(ngModel)]="prospectHasCaves" /> Presencia de cuevas
+        </label>
+        <span *ngIf="isProspecting" class="pulse-amber">Consultando telemetría satelital...</span>
+      </div>
+
+      <div class="map-container-box" [class.crosshair]="prospectMode">
+        <div #mapContainer class="leaflet-canvas"></div>
+
+        <div class="map-legend">
+          <span><i class="dot red"></i> Sitio seleccionado o guardado</span>
+          <span><i class="dot amber"></i> Mejores coincidencias</span>
+          <span><i class="dot blue"></i> Catálogo global</span>
+        </div>
+      </div>
+
+      <div class="selected-spotlight" *ngIf="selectedSite">
+        <div class="spotlight-main">
+          <div>
+            <span class="region-label">{{ selectedSite.country }}</span>
+            <h2>{{ selectedSite.name }}</h2>
+            <p class="spot-desc">{{ selectedSite.highlights }}</p>
+          </div>
+
+          <div class="kpi-group">
+            <div class="kpi-card">
+              <span>Parecido ambiental</span>
+              <strong class="font-mono accent-blue">{{ selectedSite.scores.planetarySimilarity }} %</strong>
+            </div>
+            <div class="kpi-card">
+              <span>Facilidad de acceso</span>
+              <strong class="font-mono accent-amber">{{ selectedSite.scores.logisticViability }} %</strong>
+            </div>
+            <div class="kpi-card red-border">
+              <span>Puntaje global</span>
+              <strong class="font-mono accent-red">{{ selectedSite.scores.missionReadinessScore }} %</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="edit-save-panel">
+          <div class="edit-fields">
+            <div class="field-group">
+              <label>Nombre del lugar (detectado automáticamente, puedes modificarlo):</label>
+              <input type="text" class="name-input" [(ngModel)]="customSiteName"
+                placeholder="Ej. Durango, Durango, México" />
+            </div>
+            <div class="field-group grow">
+              <label>Notas de observación para tu base de datos:</label>
+              <input type="text" class="name-input" [(ngModel)]="customSiteNotes"
+                placeholder="Escribe observaciones sobre este sitio..." />
+            </div>
+          </div>
+
+          <div class="action-row">
+            <div class="save-cluster">
+              <button class="btn-crimson" (click)="saveCurrentToDatabase()" [disabled]="isSavingDB">
+                {{ isSavingDB ? 'Guardando...' : 'Guardar en mi base de datos' }}
+              </button>
+              <span class="saved-msg" *ngIf="saveStatusMessage">{{ saveStatusMessage }}</span>
+            </div>
+
+            <button class="btn-secondary-dark" (click)="setTab('analysis')">
+              Abrir visor orbital y diagnóstico
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PESTAÑA 2: COMPARATIVA ORBITAL Y DIAGNÓSTICO-->
+  <div class="tab-view analysis-layout" *ngIf="activeTab === 'analysis' && selectedSite && activeTarget">
+    <div class="section-banner">
+      <div>
+        <span class="kicker-tag">VISOR ORBITAL NASA TREKS Y EVALUACIÓN DE VIABILIDAD</span>
+        <h2>
+          {{ selectedSite.name }}
+          <span class="editorial-italic accent-red">frente a</span>
+          {{ activeTarget.name }}
+        </h2>
+        <p class="section-intro">
+          Inspecciona en paralelo las imágenes orbitales reales de {{ activeTarget.celestialBody }} tomadas por sondas
+          de la NASA junto al relieve terrestre seleccionado, y revisa su compatibilidad científica.
+        </p>
+      </div>
+      <div class="analysis-btns">
+        <button class="btn-secondary-dark" (click)="setTab('explorer')">Volver al mapa</button>
+        <button class="btn-crimson" (click)="exportMissionReport()">Imprimir o guardar ficha</button>
+      </div>
+    </div>
+
+    <!-- VISOR ORBITAL (LUNA / MARTE VS TIERRA)-->
+    <div class="orbital-dual-grid">
+      <!-- Panel izquierdo: Órbita de la Luna o Marte -->
+      <div class="orbital-card planet-border">
+        <div class="orbital-header">
+          <div>
+            <span class="orbital-badge red">
+              ÓRBITA DE {{ activeTarget.celestialBody.toUpperCase() }} · NASA TREK
+            </span>
+            <h3>{{ activeTarget.name }}</h3>
+          </div>
+          <button class="btn-mini-recenter" (click)="recenterPlanetaryOrbit()">
+            Centrar objetivo
+          </button>
+        </div>
+
+        <div class="orbital-map-frame">
+          <div #planetaryMapContainer class="orbital-leaflet"></div>
+          <div class="orbital-hud font-mono">
+            <span>COORD: {{ activeTarget.coordinates }}</span>
+            <span>SENSOR: {{ activeTarget.celestialBody === 'Marte' ? 'MGS MOLA' : 'LRO WAC' }}</span>
+          </div>
+        </div>
+
+        <div class="orbital-specs-bar">
+          <div>
+            <span>Temperatura</span>
+            <strong>{{ activeTarget.rawSpecs.tempRange }}</strong>
+          </div>
+          <div>
+            <span>Atmósfera</span>
+            <strong>{{ activeTarget.rawSpecs.atmosphere }}</strong>
+          </div>
+          <div>
+            <span>Morfología</span>
+            <strong>{{ activeTarget.rawSpecs.terrain }}</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel derecho: Órbita de la Tierra -->
+      <div class="orbital-card earth-border">
+        <div class="orbital-header">
+          <div>
+            <span class="orbital-badge blue">
+              ÓRBITA TERRESTRE · ANÁLOGO EN EVALUACIÓN
+            </span>
+            <h3>{{ selectedSite.name }}</h3>
+          </div>
+          <button class="btn-mini-recenter" (click)="recenterEarthOrbit()">
+            Centrar sitio
+          </button>
+        </div>
+
+        <div class="orbital-map-frame">
+          <div #earthCompareMapContainer class="orbital-leaflet"></div>
+          <div class="orbital-hud font-mono">
+            <span>LAT/LON: {{ selectedSite.lat }}°, {{ selectedSite.lon }}°</span>
+            <span>SIMILITUD: {{ selectedSite.scores.planetarySimilarity }} %</span>
+          </div>
+        </div>
+
+        <div class="orbital-specs-bar">
+          <div>
+            <span>Temperatura anual</span>
+            <strong>{{ selectedSite.climateData.tMin }} °C a {{ selectedSite.climateData.tMax }} °C</strong>
+          </div>
+          <div>
+            <span>Irradiancia solar</span>
+            <strong>{{ selectedSite.climateData.solar }} kWh/m²/d</strong>
+          </div>
+          <div>
+            <span>Región</span>
+            <strong>{{ selectedSite.country }}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Selector rápido de destino espacial sin salir del visor orbital -->
+    <div class="orbital-switcher-bar">
+      <span class="font-mono">CAMBIAR DESTINO ESPACIAL EN EL VISOR:</span>
+      <div class="target-chips">
+        <button *ngFor="let t of targets" [class.active]="selectedTargetId === t.id"
+          (click)="selectedTargetId = t.id; onTargetChange()">
+          {{ t.celestialBody }} · {{ t.name }}
+        </button>
+      </div>
+    </div>
+
+    <!-- GRÁFICA RADAR Y DIAGNÓSTICO CIENTÍFICO-->
+    <div class="analysis-grid">
+      <div class="surface-card radar-panel">
+        <h3>Gráfica de huella ambiental</h3>
+        <p class="micro-help">
+          El polígono rojo representa el destino en {{ activeTarget.celestialBody }} y el azul representa el sitio en la
+          Tierra. Cuanto más coinciden sus vértices, mayor es la fidelidad experimental.
+        </p>
+        <div class="radar-wrapper">
+          <canvas #radarCanvas></canvas>
+        </div>
+
+        <div class="climate-boxes">
+          <div class="c-box">
+            <span>Temperatura mínima</span>
+            <strong class="font-mono accent-blue">{{ selectedSite.climateData.tMin }} °C</strong>
+          </div>
+          <div class="c-box">
+            <span>Temperatura máxima</span>
+            <strong class="font-mono accent-amber">{{ selectedSite.climateData.tMax }} °C</strong>
+          </div>
+          <div class="c-box">
+            <span>Irradiancia solar</span>
+            <strong class="font-mono accent-red">{{ selectedSite.climateData.solar }} kWh/m²</strong>
+          </div>
+          <div class="c-box">
+            <span>Precipitación diaria</span>
+            <strong class="font-mono">{{ selectedSite.climateData.precip }} mm</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="critique-stack">
+        <div class="diag-card strength">
+          <h3>Por qué funciona este lugar como análogo</h3>
+          <ul>
+            <li *ngFor="let item of selectedSite.critique.strongAnalogies">
+              <strong>{{ item.dimension }} ({{ item.matchPct }} % de coincidencia):</strong> {{ item.detail }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="diag-card gap">
+          <h3>En qué se diferencia del entorno espacial</h3>
+          <ul>
+            <li *ngFor="let item of selectedSite.critique.analogyGaps">
+              <strong>{{ item.dimension }} ({{ item.matchPct }} % de coincidencia):</strong> {{ item.detail }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="diag-card limit">
+          <h3>Limitaciones físicas no reproducibles en la Tierra ({{ activeTarget.celestialBody }})</h3>
+          <ul>
+            <li *ngFor="let lim of selectedSite.critique.planetaryLimitations">{{ lim }}</li>
+          </ul>
+        </div>
+
+        <div class="diag-card logistics-card">
+          <h3>Condiciones logísticas para el equipo de campo</h3>
+          <p>{{ selectedSite.logisticNotes }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PESTAÑA 3: RANKING DE CANDIDATOS-->
+  <div class="tab-view ranking-layout" *ngIf="activeTab === 'ranking'">
+    <div class="section-banner">
+      <div>
+        <span class="kicker-tag">CLASIFICACIÓN ORDENADA POR SIMILITUD</span>
+        <h2>Mejores sitios terrestres para <span class="editorial-italic accent-red">{{ activeTarget?.name }}</span>
+        </h2>
+        <p class="section-intro">
+          Los lugares se ordenan automáticamente del mayor al menor porcentaje de coincidencia según las prioridades que
+          ajustaste en el explorador.
+        </p>
+      </div>
+      <div class="filter-pills">
+        <button [class.active]="activeFilter === 'all'" (click)="activeFilter = 'all'">Todos ({{ results.length
+          }})</button>
+        <button [class.active]="activeFilter === 'understudied'" (click)="activeFilter = 'understudied'">Poco
+          explorados</button>
+        <button [class.active]="activeFilter === 'caves'" (click)="activeFilter = 'caves'">Con cuevas</button>
+      </div>
+    </div>
+
+    <div class="cards-grid">
+      <div class="site-grid-card" *ngFor="let site of filteredResults; let i = index"
+        [class.selected-card]="selectedSite?.id === site.id">
+        <div class="card-top-row">
+          <span class="rank-pill font-mono">#{{ i + 1 }}</span>
+          <span class="cat-badge" *ngIf="site.category === 'understudied'">Potencial poco estudiado</span>
+          <span class="cat-badge amber" *ngIf="site.hasCaves">Sistema subterráneo</span>
+        </div>
+
+        <h3>{{ site.name }}</h3>
+        <span class="country-sub">{{ site.country }}</span>
+        <p class="card-desc">{{ site.highlights }}</p>
+
+        <div class="card-metrics">
+          <div>
+            <span>Parecido</span>
+            <strong class="font-mono accent-blue">{{ site.scores.planetarySimilarity }} %</strong>
+          </div>
+          <div>
+            <span>Acceso</span>
+            <strong class="font-mono accent-amber">{{ site.scores.logisticViability }} %</strong>
+          </div>
+          <div>
+            <span>Global</span>
+            <strong class="font-mono accent-red">{{ site.scores.missionReadinessScore }} %</strong>
+          </div>
+        </div>
+
+        <div class="card-footer-btns">
+          <button class="btn-secondary-dark" (click)="selectSite(site, true, true)">Ubicar en mapa</button>
+          <button class="btn-crimson" (click)="selectSite(site, false); setTab('analysis')">Visor y diagnóstico</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PESTAÑA 4: BASE DE DATOS PERSONAL DEL USUARIO-->
+  <div class="tab-view db-layout" *ngIf="activeTab === 'database'">
+    <div class="section-banner">
+      <div>
+        <span class="kicker-tag">REGISTRO PERSONAL · {{ currentUser.name.toUpperCase() }}</span>
+        <h2>Base de datos de <span class="editorial-italic accent-red">sitios descubiertos</span></h2>
+        <p class="section-intro">
+          Todos los lugares que exploras y guardas quedan vinculados a tu cuenta en el servidor para consultarlos o
+          ubicarlos nuevamente en cualquier momento.
+        </p>
+      </div>
+      <button class="btn-crimson" (click)="prospectMode = true; setTab('explorer')">
+        Explorar nuevo lugar en el mapa
+      </button>
+    </div>
+
+    <div class="empty-db" *ngIf="savedDiscoveries.length === 0">
+      <h3>Tu base de datos personal aún está vacía</h3>
+      <p>
+        Dirígete al <strong>Explorador satelital</strong>, busca una ciudad como <em>"Durango, Durango"</em> o haz clic
+        en cualquier punto del mapa, edita el nombre si lo deseas y presiona <strong>Guardar en mi base de
+          datos</strong>.
+      </p>
+    </div>
+
+    <div class="cards-grid" *ngIf="savedDiscoveries.length > 0">
+      <div class="site-grid-card" *ngFor="let item of savedDiscoveries">
+        <div class="card-top-row">
+          <span class="cat-badge">Guardado el {{ item.savedAt }}</span>
+          <span class="font-mono coord-muted">{{ item.lat }}°, {{ item.lon }}°</span>
+        </div>
+
+        <h3>{{ item.name }}</h3>
+        <span class="country-sub">Evaluado para: {{ item.matchedTargetName }}</span>
+        <p class="card-desc">{{ item.highlights }}</p>
+
+        <div class="card-metrics">
+          <div>
+            <span>Parecido</span>
+            <strong class="font-mono accent-blue">{{ item.scores.planetarySimilarity }} %</strong>
+          </div>
+          <div>
+            <span>Temp. mínima</span>
+            <strong class="font-mono accent-amber">{{ item.climateData.tMin }} °C</strong>
+          </div>
+          <div>
+            <span>Solar</span>
+            <strong class="font-mono accent-red">{{ item.climateData.solar }}</strong>
+          </div>
+        </div>
+
+        <div class="card-footer-btns">
+          <button class="btn-secondary-dark" (click)="selectSite(item, true, true)">Ubicar en mapa</button>
+          <button class="btn-danger-outline" (click)="deleteFromDatabase(item.id)">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+####################################################################
+ARCHIVO: nasa-analog-frontend\src\app\dashboard\dashboard.spec.ts
+####################################################################
+
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Dashboard } from './dashboard';
+
+describe('Dashboard', () => {
+  let component: Dashboard;
+  let fixture: ComponentFixture<Dashboard>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [Dashboard],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(Dashboard);
+    component = fixture.componentInstance;
+    await fixture.whenStable();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
+
+
+####################################################################
+ARCHIVO: nasa-analog-frontend\src\app\dashboard\dashboard.ts
+####################################################################
+
+import { Component, OnInit, ViewChild, ElementRef, ChangeDetectorRef } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import * as L from 'leaflet';
+import { Chart, registerables } from 'chart.js';
+import {
+  AnalogService,
+  SpaceTarget,
+  EarthMatchResult,
+  EnvironmentalProfile,
+  UserProfile,
+  GeocodeCandidate
+} from '../services/analog.service';
+
+Chart.register(...registerables);
+
+export type TabId = 'explorer' | 'analysis' | 'ranking' | 'database';
+
+@Component({
+  selector: 'app-dashboard',
+  imports: [CommonModule, FormsModule],
+  templateUrl: './dashboard.html',
+  styleUrl: './dashboard.css'
+})
+export class Dashboard implements OnInit {
+  @ViewChild('mapContainer') mapContainer?: ElementRef<HTMLDivElement>;
+  @ViewChild('planetaryMapContainer') planetaryMapContainer?: ElementRef<HTMLDivElement>;
+  @ViewChild('earthCompareMapContainer') earthCompareMapContainer?: ElementRef<HTMLDivElement>;
+  @ViewChild('radarCanvas') radarCanvas?: ElementRef<HTMLCanvasElement>;
+
+  activeTab: TabId = 'explorer';
+
+  // Control de acceso previo a la plataforma
+  currentUser: UserProfile | null = null;
+  authMode: 'login' | 'register' = 'login';
+  authName: string = '';
+  authEmail: string = '';
+  authPassword: string = '';
+  authInstitution: string = '';
+  authError: string = '';
+  isAuthenticating: boolean = false;
+
+  // Buscador mundial de ubicaciones con lista desplegable
+  searchQuery: string = '';
+  searchSuggestions: GeocodeCandidate[] = [];
+  searchDropdownOpen: boolean = false;
+  searchNoResults: boolean = false;
+  isSearchingPlace: boolean = false;
+  private searchTimer: any = null;
+
+  targets: SpaceTarget[] = [];
+  selectedTargetId: string = 'moon-marius-hills';
+  activeTarget: SpaceTarget | null = null;
+
+  results: EarthMatchResult[] = [];
+  selectedSite: EarthMatchResult | null = null;
+  customPinSite: EarthMatchResult | null = null;
+  savedDiscoveries: EarthMatchResult[] = [];
+
+  // Campos editables para guardar en la base de datos personal
+  customSiteName: string = '';
+  customSiteNotes: string = '';
+  saveStatusMessage: string = '';
+  isSavingDB: boolean = false;
+
+  activeFilter: 'all' | 'understudied' | 'caves' = 'all';
+  prospectMode: boolean = true;
+  prospectGeology: string = 'basaltic-volcanic';
+  prospectHasCaves: boolean = false;
+  showNasaGibsLayer: boolean = false;
+
+  isLoading: boolean = false;
+  isProspecting: boolean = false;
+  errorMessage: string = '';
+
+  weights: EnvironmentalProfile = {
+    thermal: 80,
+    radiation: 85,
+    aridity: 90,
+    topography: 70,
+    geology: 95,
+    subsurface: 100
+  };
+
+  private map: L.Map | null = null;
+  private markersLayer: L.LayerGroup = L.layerGroup();
+  private nasaGibsLayer: L.TileLayer | null = null;
+
+  private planetaryMap: L.Map | null = null;
+  private earthCompareMap: L.Map | null = null;
+
+  private radarChart: Chart | null = null;
+
+  constructor(
+    private analogService: AnalogService,
+    private cdr: ChangeDetectorRef
+  ) { }
+
+  get filteredResults(): EarthMatchResult[] {
+    if (this.activeFilter === 'understudied') {
+      return this.results.filter((s) => s.category === 'understudied');
+    }
+    if (this.activeFilter === 'caves') {
+      return this.results.filter((s) => s.hasCaves);
+    }
+    return this.results;
+  }
+
+  ngOnInit(): void {
+    const storedUser = localStorage.getItem('terratwin_user');
+    if (storedUser) {
+      try {
+        this.currentUser = JSON.parse(storedUser);
+        if (this.currentUser) {
+          this.enterPlatformWorkspace();
+        }
+      } catch {
+        this.currentUser = null;
+      }
+    }
+  }
+
+  // ACCESO A LA PLATAFORMA
+  switchAuthMode(mode: 'login' | 'register'): void {
+    this.authMode = mode;
+    this.authError = '';
+    this.cdr.detectChanges();
+  }
+
+  submitAuth(): void {
+    this.authError = '';
+    this.isAuthenticating = true;
+    this.cdr.detectChanges();
+
+    if (this.authMode === 'login') {
+      this.analogService.login(this.authEmail, this.authPassword).subscribe({
+        next: (user) => {
+          this.isAuthenticating = false;
+          this.completeSignIn(user);
+        },
+        error: (err) => {
+          this.isAuthenticating = false;
+          this.authError =
+            err.error?.error || 'No se pudo iniciar sesión. Verifica que el servidor esté encendido.';
+          this.cdr.detectChanges();
+        }
+      });
+    } else {
+      this.analogService
+        .register(this.authName, this.authEmail, this.authPassword, this.authInstitution)
+        .subscribe({
+          next: (user) => {
+            this.isAuthenticating = false;
+            this.completeSignIn(user);
+          },
+          error: (err) => {
+            this.isAuthenticating = false;
+            this.authError =
+              err.error?.error || 'No se pudo crear la cuenta. Verifica que el servidor esté encendido.';
+            this.cdr.detectChanges();
+          }
+        });
+    }
+  }
+
+  enterDemoMode(): void {
+    this.authError = '';
+    this.isAuthenticating = true;
+    this.cdr.detectChanges();
+
+    this.analogService.loginDemo().subscribe({
+      next: (user) => {
+        this.isAuthenticating = false;
+        this.completeSignIn(user);
+      },
+      error: () => {
+        this.isAuthenticating = false;
+        this.authError = 'No se detecta el servidor en http://localhost:3000. Enciéndelo primero.';
+        this.cdr.detectChanges();
+      }
+    });
+  }
+
+  private completeSignIn(user: UserProfile): void {
+    this.currentUser = user;
+    localStorage.setItem('terratwin_user', JSON.stringify(user));
+    this.activeTab = 'explorer';
+    this.cdr.detectChanges();
+    this.enterPlatformWorkspace();
+  }
+
+  private enterPlatformWorkspace(): void {
+    this.loadInitialData();
+    this.loadSavedDiscoveries();
+    setTimeout(() => {
+      this.initMap();
+    }, 120);
+  }
+
+  logout(): void {
+    this.currentUser = null;
+    localStorage.removeItem('terratwin_user');
+    if (this.map) {
+      this.map.remove();
+      this.map = null;
+    }
+    this.destroyOrbitalMaps();
+    if (this.radarChart) {
+      this.radarChart.destroy();
+      this.radarChart = null;
+    }
+    this.cdr.detectChanges();
+  }
+
+  // NAVEGACIÓN Y MAPAS
+  setTab(tab: TabId): void {
+    if (this.activeTab === 'analysis' && tab !== 'analysis') {
+      this.destroyOrbitalMaps();
+    }
+
+    this.activeTab = tab;
+    this.cdr.detectChanges();
+
+    if (tab === 'explorer') {
+      setTimeout(() => {
+        if (!this.map) {
+          this.initMap();
+        } else {
+          this.map.invalidateSize();
+        }
+      }, 80);
+    } else if (tab === 'analysis') {
+      setTimeout(() => {
+        this.initOrbitalMaps();
+        this.renderRadarChart();
+      }, 90);
+    } else if (tab === 'database') {
+      this.loadSavedDiscoveries();
+    }
+  }
+
+  private initMap(): void {
+    if (!this.mapContainer || this.map) return;
+
+    const el = this.mapContainer.nativeElement;
+
+    this.map = L.map(el, {
+      center: [24.0277, -104.6532],
+      zoom: 4,
+      zoomControl: true
+    });
+
+    L.tileLayer(
+      'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+      {
+        attribution: 'NASA / Esri World Imagery',
+        maxZoom: 18
+      }
+    ).addTo(this.map);
+
+    this.nasaGibsLayer = L.tileLayer(
+      'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/2026-10-15/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg',
+      {
+        attribution: 'NASA EOSDIS GIBS',
+        maxZoom: 9,
+        opacity: 0.78
+      }
+    );
+
+    L.tileLayer(
+      'https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png',
+      {
+        subdomains: 'abcd',
+        maxZoom: 18
+      }
+    ).addTo(this.map);
+
+    this.markersLayer.addTo(this.map);
+
+    this.map.on('click', (e: L.LeafletMouseEvent) => {
+      this.searchSuggestions = [];
+      this.searchDropdownOpen = false;
+      if (this.prospectMode) {
+        this.analyzeCustomCoordinate(e.latlng.lat, e.latlng.lng, '', 10);
+      }
+    });
+
+    setTimeout(() => {
+      this.map?.invalidateSize();
+    }, 250);
+
+    const observer = new ResizeObserver(() => {
+      this.map?.invalidateSize();
+    });
+    observer.observe(el);
+
+    if (this.results.length > 0) {
+      this.updateMapMarkers();
+    }
+  }
+
+  // VISOR ORBITAL DE LA LUNA Y MARTE
+  private parseTargetCoordinates(coordStr: string): { lat: number; lon: number } {
+    const match = coordStr.match(/([\d.]+)\s*°?\s*([NS])\s*,\s*([\d.]+)\s*°?\s*([EW])/i);
+    if (!match) {
+      return { lat: 0, lon: 0 };
+    }
+    let lat = parseFloat(match[1]);
+    if (match[2].toUpperCase() === 'S') lat = -lat;
+
+    let lon = parseFloat(match[3]);
+    if (match[4].toUpperCase() === 'W') lon = -lon;
+    if (lon > 180) lon = lon - 360;
+
+    const safeLat = Math.max(-80, Math.min(80, lat));
+    return { lat: safeLat, lon };
+  }
+
+  private initOrbitalMaps(): void {
+    this.destroyOrbitalMaps();
+
+    if (!this.activeTarget || !this.selectedSite) return;
+
+    if (this.planetaryMapContainer) {
+      const planetEl = this.planetaryMapContainer.nativeElement;
+      const coords = this.parseTargetCoordinates(this.activeTarget.coordinates);
+      const isMars = this.activeTarget.celestialBody === 'Marte';
+
+      const trekUrl = isMars
+        ? 'https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0/default/default028mm/{z}/{y}/{x}.jpg'
+        : 'https://trek.nasa.gov/tiles/Moon/EQ/LRO_WAC_Mosaic_Global_303ppd_v02/1.0.0/default/default028mm/{z}/{y}/{x}.jpg';
+
+      this.planetaryMap = L.map(planetEl, {
+        crs: L.CRS.EPSG4326,
+        center: [coords.lat, coords.lon],
+        zoom: 4,
+        minZoom: 1,
+        maxZoom: 7,
+        maxBounds: [
+          [-90, -180],
+          [90, 180]
+        ],
+        zoomControl: true
+      });
+
+      L.tileLayer(trekUrl, {
+        attribution: isMars ? 'NASA Mars Trek · MGS MOLA' : 'NASA Moon Trek · LRO WAC',
+        noWrap: true,
+        bounds: [
+          [-90, -180],
+          [90, 180]
+        ]
+      }).addTo(this.planetaryMap);
+
+      const targetIcon = L.divIcon({
+        className: 'nasa-pin-wrapper',
+        html: `<div class="orbital-reticle"></div>`,
+        iconSize: [28, 28],
+        iconAnchor: [14, 14]
+      });
+
+      L.marker([coords.lat, coords.lon], { icon: targetIcon })
+        .bindTooltip(
+          `<strong>${this.activeTarget.name}</strong><br/>${this.activeTarget.coordinates}`,
+          { direction: 'top' }
+        )
+        .addTo(this.planetaryMap);
+
+      setTimeout(() => {
+        this.planetaryMap?.invalidateSize();
+      }, 150);
+    }
+
+    if (this.earthCompareMapContainer) {
+      const earthEl = this.earthCompareMapContainer.nativeElement;
+      const { lat, lon, name, country } = this.selectedSite;
+
+      this.earthCompareMap = L.map(earthEl, {
+        center: [lat, lon],
+        zoom: 12,
+        zoomControl: true
+      });
+
+      L.tileLayer(
+        'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+        {
+          attribution: 'NASA / Esri World Imagery',
+          maxZoom: 18
+        }
+      ).addTo(this.earthCompareMap);
+
+      const earthIcon = L.divIcon({
+        className: 'nasa-pin-wrapper',
+        html: `<div class="nasa-pin selected"></div>`,
+        iconSize: [22, 22],
+        iconAnchor: [11, 11]
+      });
+
+      L.marker([lat, lon], { icon: earthIcon })
+        .bindTooltip(`<strong>${name}</strong><br/>${country}`, { direction: 'top' })
+        .addTo(this.earthCompareMap);
+
+      setTimeout(() => {
+        this.earthCompareMap?.invalidateSize();
+      }, 150);
+    }
+  }
+
+  recenterPlanetaryOrbit(): void {
+    if (!this.planetaryMap || !this.activeTarget) return;
+    const coords = this.parseTargetCoordinates(this.activeTarget.coordinates);
+    this.planetaryMap.flyTo([coords.lat, coords.lon], 4, { duration: 1 });
+  }
+
+  recenterEarthOrbit(): void {
+    if (!this.earthCompareMap || !this.selectedSite) return;
+    this.earthCompareMap.flyTo([this.selectedSite.lat, this.selectedSite.lon], 12, { duration: 1 });
+  }
+
+  private destroyOrbitalMaps(): void {
+    if (this.planetaryMap) {
+      this.planetaryMap.remove();
+      this.planetaryMap = null;
+    }
+    if (this.earthCompareMap) {
+      this.earthCompareMap.remove();
+      this.earthCompareMap = null;
+    }
+  }
+
+  toggleNasaGibs(): void {
+    if (!this.map || !this.nasaGibsLayer) return;
+    this.showNasaGibsLayer = !this.showNasaGibsLayer;
+    if (this.showNasaGibsLayer) {
+      this.nasaGibsLayer.addTo(this.map);
+    } else {
+      this.map.removeLayer(this.nasaGibsLayer);
+    }
+  }
+
+  toggleProspectMode(): void {
+    this.prospectMode = !this.prospectMode;
+  }
+
+  // BUSCADOR DE UBICACIONES
+  onSearchInputChange(): void {
+    if (this.searchTimer) {
+      clearTimeout(this.searchTimer);
+    }
+
+    const q = this.searchQuery.trim();
+    this.searchNoResults = false;
+
+    if (q.length < 2) {
+      this.searchSuggestions = [];
+      this.searchDropdownOpen = false;
+      return;
+    }
+
+    this.searchTimer = setTimeout(() => {
+      this.fetchLocationOptions(q);
+    }, 300);
+  }
+
+  searchLocationByText(): void {
+    const q = this.searchQuery.trim();
+    if (q.length < 2) return;
+
+    if (this.searchTimer) {
+      clearTimeout(this.searchTimer);
+    }
+
+    this.fetchLocationOptions(q);
+  }
+
+  private fetchLocationOptions(q: string): void {
+    this.isSearchingPlace = true;
+    this.searchDropdownOpen = true;
+    this.searchNoResults = false;
+    this.errorMessage = '';
+    this.cdr.detectChanges();
+
+    this.analogService.searchPlace(q).subscribe({
+      next: (res) => {
+        this.isSearchingPlace = false;
+        this.searchSuggestions = res.results || [];
+        this.searchNoResults = this.searchSuggestions.length === 0;
+        this.searchDropdownOpen = true;
+        this.cdr.detectChanges();
+      },
+      error: () => {
+        this.isSearchingPlace = false;
+        this.searchSuggestions = [];
+        this.searchNoResults = true;
+        this.searchDropdownOpen = true;
+        this.cdr.detectChanges();
+      }
+    });
+  }
+
+  closeSearchDropdown(): void {
+    this.searchDropdownOpen = false;
+  }
+
+  selectSearchSuggestion(item: GeocodeCandidate): void {
+    const selectedLabel = item.fullName || item.name;
+    this.searchQuery = selectedLabel;
+    this.searchSuggestions = [];
+    this.searchDropdownOpen = false;
+    this.searchNoResults = false;
+    this.prospectMode = true;
+    this.analyzeCustomCoordinate(item.lat, item.lon, selectedLabel, 12);
+  }
+
+  analyzeCustomCoordinate(
+    lat: number,
+    lon: number,
+    preferredName: string = '',
+    zoomLevel: number = 11
+  ): void {
+    this.isProspecting = true;
+    this.saveStatusMessage = '';
+    this.cdr.detectChanges();
+
+    this.analogService
+      .prospectCoordinate(
+        lat,
+        lon,
+        this.selectedTargetId,
+        this.weights,
+        this.prospectGeology,
+        this.prospectHasCaves,
+        preferredName
+      )
+      .subscribe({
+        next: (discoveredSite) => {
+          this.customPinSite = discoveredSite;
+          this.customSiteName = discoveredSite.name;
+          this.customSiteNotes = discoveredSite.highlights;
+          this.isProspecting = false;
+          this.selectSite(discoveredSite, true, false, zoomLevel);
+          this.cdr.detectChanges();
+        },
+        error: () => {
+          this.isProspecting = false;
+          this.errorMessage = 'No se pudo consultar esa coordenada. Verifica que el servidor esté encendido.';
+          this.cdr.detectChanges();
+        }
+      });
+  }
+
+  saveCurrentToDatabase(): void {
+    if (!this.selectedSite) return;
+
+    this.isSavingDB = true;
+    this.saveStatusMessage = '';
+    this.cdr.detectChanges();
+
+    this.analogService
+      .saveDiscovery(
+        this.selectedSite,
+        this.activeTarget?.name || 'Misión espacial',
+        this.customSiteName,
+        this.customSiteNotes,
+        this.currentUser
+      )
+      .subscribe({
+        next: (savedItem) => {
+          this.isSavingDB = false;
+          this.saveStatusMessage = `Guardado en tu base de datos (${savedItem.name})`;
+          this.loadSavedDiscoveries();
+          this.cdr.detectChanges();
+        },
+        error: () => {
+          this.isSavingDB = false;
+          this.saveStatusMessage = 'No se pudo guardar. Verifica que el servidor esté encendido.';
+          this.cdr.detectChanges();
+        }
+      });
+  }
+
+  loadSavedDiscoveries(): void {
+    this.analogService.getDiscoveries(this.currentUser?.id).subscribe({
+      next: (list) => {
+        this.savedDiscoveries = list;
+        this.updateMapMarkers();
+        this.cdr.detectChanges();
+      }
+    });
+  }
+
+  deleteFromDatabase(id: string): void {
+    this.analogService.deleteDiscovery(id).subscribe({
+      next: () => {
+        this.loadSavedDiscoveries();
+      }
+    });
+  }
+
+  loadInitialData(): void {
+    this.isLoading = true;
+    this.analogService.getTargets().subscribe({
+      next: (data) => {
+        this.targets = data;
+        if (data.length > 0) {
+          this.selectedTargetId = data[0].id;
+          this.runSimulation();
+        }
+        this.cdr.detectChanges();
+      },
+      error: () => {
+        this.errorMessage =
+          'No se detecta el servidor en http://localhost:3000. Enciéndelo con node server.js.';
+        this.isLoading = false;
+        this.cdr.detectChanges();
+      }
+    });
+  }
+
+  onTargetChange(): void {
+    const target = this.targets.find((t) => t.id === this.selectedTargetId);
+    if (target) {
+      this.weights.subsurface = target.requiresCaves ? 100 : 25;
+    }
+    this.runSimulation();
+  }
+
+  runSimulation(): void {
+    this.isLoading = true;
+    this.errorMessage = '';
+
+    this.analogService.findMatches(this.selectedTargetId, this.weights).subscribe({
+      next: (response) => {
+        this.activeTarget = response.target;
+        this.results = response.results;
+        this.isLoading = false;
+
+        if (this.customPinSite && this.selectedSite?.id === this.customPinSite.id) {
+          this.analyzeCustomCoordinate(
+            this.customPinSite.lat,
+            this.customPinSite.lon,
+            this.customPinSite.name,
+            12
+          );
+          return;
+        }
+
+        if (this.results.length > 0) {
+          const stillExists = this.results.find((r) => r.id === this.selectedSite?.id);
+          this.selectSite(stillExists || this.results[0], false);
+        }
+
+        this.updateMapMarkers();
+
+        if (this.activeTab === 'analysis') {
+          setTimeout(() => {
+            this.initOrbitalMaps();
+            this.renderRadarChart();
+          }, 80);
+        }
+
+        this.cdr.detectChanges();
+      },
+      error: () => {
+        this.errorMessage = 'Error al calcular similitudes.';
+        this.isLoading = false;
+        this.cdr.detectChanges();
+      }
+    });
+  }
+
+  selectSite(
+    site: EarthMatchResult,
+    flyToLocation: boolean = true,
+    switchToExplorer: boolean = false,
+    zoomLevel: number = 10
+  ): void {
+    this.selectedSite = site;
+    this.customSiteName = site.name;
+    this.customSiteNotes = site.highlights;
+    this.saveStatusMessage = '';
+
+    if (switchToExplorer) {
+      if (this.activeTab === 'analysis') {
+        this.destroyOrbitalMaps();
+      }
+      this.activeTab = 'explorer';
+    }
+
+    this.updateMapMarkers();
+    this.cdr.detectChanges();
+
+    if (flyToLocation && this.map && this.activeTab === 'explorer') {
+      setTimeout(() => {
+        this.map?.invalidateSize();
+        this.map?.flyTo([site.lat, site.lon], zoomLevel, { duration: 1.1 });
+      }, 60);
+    }
+
+    if (this.activeTab === 'analysis') {
+      setTimeout(() => {
+        this.initOrbitalMaps();
+        this.renderRadarChart();
+      }, 80);
+    }
+  }
+
+  exportMissionReport(): void {
+    window.print();
+  }
+
+  private updateMapMarkers(): void {
+    if (!this.map) return;
+    this.markersLayer.clearLayers();
+
+    this.results.forEach((site, index) => {
+      const isSelected = this.selectedSite?.id === site.id;
+      const isTop3 = index < 3;
+      const pinClass = `nasa-pin ${isTop3 ? 'top-match' : ''} ${isSelected ? 'selected' : ''}`;
+
+      const icon = L.divIcon({
+        className: 'nasa-pin-wrapper',
+        html: `<div class="${pinClass}"></div>`,
+        iconSize: [20, 20],
+        iconAnchor: [10, 10]
+      });
+
+      const marker = L.marker([site.lat, site.lon], { icon });
+      marker.bindTooltip(
+        `<strong>${site.name}</strong><br/>Parecido: ${site.scores.planetarySimilarity}%`,
+        { direction: 'top' }
+      );
+      marker.on('click', () => {
+        this.selectSite(site, true, false, 10);
+      });
+      marker.addTo(this.markersLayer);
+    });
+
+    const extraPins = [...this.savedDiscoveries];
+    if (this.customPinSite && !extraPins.some((p) => p.id === this.customPinSite?.id)) {
+      extraPins.push(this.customPinSite);
+    }
+
+    extraPins.forEach((site) => {
+      const isSelected = this.selectedSite?.id === site.id;
+      const icon = L.divIcon({
+        className: 'nasa-pin-wrapper',
+        html: `<div class="nasa-pin custom-pin ${isSelected ? 'selected' : ''}"></div>`,
+        iconSize: [22, 22],
+        iconAnchor: [11, 11]
+      });
+      const marker = L.marker([site.lat, site.lon], { icon });
+      marker.bindTooltip(`<strong>${site.name}</strong>`, { direction: 'top' });
+      marker.on('click', () => {
+        this.selectSite(site, true, false, 12);
+      });
+      marker.addTo(this.markersLayer);
+    });
+  }
+
+  private renderRadarChart(): void {
+    if (!this.radarCanvas || !this.selectedSite || !this.activeTarget) return;
+    const ctx = this.radarCanvas.nativeElement.getContext('2d');
+    if (!ctx) return;
+
+    if (this.radarChart) {
+      this.radarChart.destroy();
+    }
+
+    const { labels, targetValues, earthValues } = this.selectedSite.radarComparison;
+
+    this.radarChart = new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels,
+        datasets: [
+          {
+            label: `${this.activeTarget.name} (${this.activeTarget.celestialBody})`,
+            data: targetValues,
+            backgroundColor: 'rgba(225, 29, 72, 0.22)',
+            borderColor: '#ff2a4b',
+            pointBackgroundColor: '#ff2a4b',
+            borderWidth: 2.5
+          },
+          {
+            label: `${this.selectedSite.name} (Tierra)`,
+            data: earthValues,
+            backgroundColor: 'rgba(56, 189, 248, 0.22)',
+            borderColor: '#38bdf8',
+            pointBackgroundColor: '#38bdf8',
+            borderWidth: 2.5
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          r: {
+            min: 0,
+            max: 100,
+            ticks: { display: false, stepSize: 25 },
+            grid: { color: 'rgba(255, 255, 255, 0.12)' },
+            angleLines: { color: 'rgba(255, 255, 255, 0.12)' },
+            pointLabels: {
+              color: '#e4e4e7',
+              font: { size: 12, weight: 'bold', family: 'DM Sans' }
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              color: '#f4f4f6',
+              padding: 16,
+              font: { size: 12, family: 'DM Sans' }
+            }
+          }
+        }
+      }
+    });
+  }
+}
+
+####################################################################
+ARCHIVO: nasa-analog-frontend\src\app\services\analog.service.ts
+####################################################################
+
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+export interface UserProfile {
+  id: string;
+  name: string;
+  email: string;
+  institution: string;
+}
+
+export interface GeocodeCandidate {
+  name: string;
+  subtitle: string;
+  fullName: string;
+  lat: number;
+  lon: number;
+  type: string;
+}
+
+export interface GeocodeResponse {
+  query: string;
+  results: GeocodeCandidate[];
+}
+
+export interface EnvironmentalProfile {
+  thermal: number;
+  radiation: number;
+  aridity: number;
+  topography: number;
+  geology: number;
+  subsurface: number;
+}
+
+export interface SpaceTarget {
+  id: string;
+  name: string;
+  celestialBody: string;
+  coordinates: string;
+  missionObjective: string;
+  requiredGeology: string;
+  requiresCaves: boolean;
+  rawSpecs: {
+    tempRange: string;
+    solarIrradiance: string;
+    atmosphere: string;
+    terrain: string;
+  };
+  profile: EnvironmentalProfile;
+}
+
+export interface AnalogyCritiqueItem {
+  dimension: string;
+  matchPct: number;
+  detail: string;
+}
+
+export interface ScientificCritique {
+  strongAnalogies: AnalogyCritiqueItem[];
+  analogyGaps: AnalogyCritiqueItem[];
+  planetaryLimitations: string[];
+}
+
+export interface EarthMatchResult {
+  id: string;
+  userId?: string;
+  name: string;
+  country: string;
+  category: string;
+  isCustom: boolean;
+  savedAt?: string;
+  matchedTargetName?: string;
+  authorName?: string;
+  authorInstitution?: string;
+  lat: number;
+  lon: number;
+  geologyType: string;
+  hasCaves: boolean;
+  highlights: string;
+  logisticNotes: string;
+  climateData: {
+    tMin: number;
+    tMax: number;
+    solar: number;
+    precip: number;
+    source: string;
+  };
+  scores: {
+    planetarySimilarity: number;
+    logisticViability: number;
+    missionReadinessScore: number;
+  };
+  critique: ScientificCritique;
+  radarComparison: {
+    labels: string[];
+    targetValues: number[];
+    earthValues: number[];
+  };
+}
+
+export interface MatchResponse {
+  target: SpaceTarget;
+  totalAnalyzed: number;
+  results: EarthMatchResult[];
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AnalogService {
+  private readonly apiUrl = 'http://localhost:3000/api';
+
+  constructor(private http: HttpClient) { }
+
+  login(email: string, password: string): Observable<UserProfile> {
+    return this.http.post<UserProfile>(`${this.apiUrl}/auth/login`, { email, password });
+  }
+
+  register(name: string, email: string, password: string, institution: string): Observable<UserProfile> {
+    return this.http.post<UserProfile>(`${this.apiUrl}/auth/register`, {
+      name,
+      email,
+      password,
+      institution
+    });
+  }
+
+  loginDemo(): Observable<UserProfile> {
+    return this.http.post<UserProfile>(`${this.apiUrl}/auth/demo`, {});
+  }
+
+  searchPlace(query: string): Observable<GeocodeResponse> {
+    return this.http.get<GeocodeResponse>(`${this.apiUrl}/geocode`, {
+      params: { q: query }
+    });
+  }
+
+  getTargets(): Observable<SpaceTarget[]> {
+    return this.http.get<SpaceTarget[]>(`${this.apiUrl}/targets`);
+  }
+
+  findMatches(targetId: string, weights: EnvironmentalProfile): Observable<MatchResponse> {
+    return this.http.post<MatchResponse>(`${this.apiUrl}/match`, {
+      targetId,
+      weights
+    });
+  }
+
+  prospectCoordinate(
+    lat: number,
+    lon: number,
+    targetId: string,
+    weights: EnvironmentalProfile,
+    geologyType: string,
+    hasCaves: boolean,
+    preferredName: string = ''
+  ): Observable<EarthMatchResult> {
+    return this.http.post<EarthMatchResult>(`${this.apiUrl}/prospect`, {
+      lat,
+      lon,
+      targetId,
+      weights,
+      geologyType,
+      hasCaves,
+      preferredName
+    });
+  }
+
+  getDiscoveries(userId?: string): Observable<EarthMatchResult[]> {
+    const params: Record<string, string> = {};
+    if (userId) {
+      params['userId'] = userId;
+    }
+    return this.http.get<EarthMatchResult[]>(`${this.apiUrl}/discoveries`, { params });
+  }
+
+  saveDiscovery(
+    site: EarthMatchResult,
+    targetName: string,
+    customName: string,
+    notes: string,
+    user: UserProfile | null
+  ): Observable<EarthMatchResult> {
+    return this.http.post<EarthMatchResult>(`${this.apiUrl}/discoveries`, {
+      site,
+      targetName,
+      customName,
+      notes,
+      user
+    });
+  }
+
+  deleteDiscovery(id: string): Observable<{ deleted: boolean }> {
+    return this.http.delete<{ deleted: boolean }>(`${this.apiUrl}/discoveries/${id}`);
+  }
+}
+
+####################################################################
+ARCHIVO: nasa-analog-frontend\src\index.html
+####################################################################
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NasaAnalogFrontend</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
+
+
+####################################################################
+ARCHIVO: nasa-analog-frontend\src\main.ts
+####################################################################
+
+import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';
+import { App } from './app/app';
+
+bootstrapApplication(App, appConfig)
+  .catch((err) => console.error(err));
+
+####################################################################
+ARCHIVO: nasa-analog-frontend\src\styles.css
+####################################################################
+
+@import 'leaflet/dist/leaflet.css';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Outfit:wght@600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #050507;
+  color: #f4f4f6;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.editorial-italic {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.font-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Marcadores del mapa*/
+.nasa-pin-wrapper {
+  background: transparent;
+  border: none;
+}
+
+.nasa-pin {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #38bdf8;
+  border: 2px solid #050507;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.85);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.nasa-pin.top-match {
+  background: #facc15;
+  border-color: #050507;
+  box-shadow: 0 0 14px rgba(250, 204, 21, 0.9);
+  width: 19px;
+  height: 19px;
+}
+
+.nasa-pin.custom-pin {
+  background: #ff2a4b;
+  border-color: #ffffff;
+  box-shadow: 0 0 16px rgba(255, 42, 75, 0.95);
+  width: 21px;
+  height: 21px;
+}
+
+.nasa-pin.selected {
+  background: #e11d48;
+  border-color: #ffffff;
+  box-shadow: 0 0 18px #ff2a4b, 0 0 32px rgba(225, 29, 72, 0.9);
+  transform: scale(1.35);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272f;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e11d48;
+}
+
+@media print {
+
+  .top-bar,
+  .control-sidebar,
+  .map-toolbar,
+  .prospect-drawer,
+  .map-container-box,
+  .analysis-btns {
+    display: none !important;
+  }
+
+  body,
+  .app-shell {
+    background: #ffffff !important;
+    color: #09090b !important;
+  }
+}
+
+####################################################################
+ARCHIVO: nasa-analog-frontend\tsconfig.app.json
+####################################################################
+
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": []
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "src/**/*.spec.ts"
+  ]
+}
+
+
+####################################################################
+ARCHIVO: nasa-analog-frontend\tsconfig.json
+####################################################################
+
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "preserve"
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
+}
+
+
+####################################################################
+ARCHIVO: nasa-analog-frontend\tsconfig.spec.json
+####################################################################
+
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "vitest/globals"
+    ]
+  },
+  "include": [
+    "src/**/*.d.ts",
+    "src/**/*.spec.ts"
+  ]
+}
+

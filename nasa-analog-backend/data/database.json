@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": "user-demo-1",
+      "name": "Investigador invitado",
+      "email": "demo@terratwin.space",
+      "password": "demo",
+      "institution": "Laboratorio de Exploración Planetaria"
+    },
+    {
+      "id": "user-1794622206911",
+      "name": "Natalia Esparza",
+      "email": "chicademonio09@gmail.com",
+      "password": "12345",
+      "institution": "Universidad Politécnica de Durango"
+    }
+  ],
+  "discoveries": []
+}

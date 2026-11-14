@@ -1,0 +1,140 @@
+[
+  {
+    "id": "moon-shackleton",
+    "name": "Cráter Shackleton (Polo Sur Lunar)",
+    "celestialBody": "Luna",
+    "coordinates": "89.9° S, 0.0° E",
+    "missionObjective": "Extracción de hielo de agua en regiones permanentemente en sombra (PSR) y energía solar continua en los bordes del cráter.",
+    "requiredGeology": "anorthosite-regolith",
+    "requiresCaves": false,
+    "rawSpecs": {
+      "tempRange": "-180°C a -50°C",
+      "solarIrradiance": "Alta en picos / Nula en fondo",
+      "atmosphere": "Vacío ultra-alto",
+      "terrain": "Pendientes pronunciadas de 25°-30°"
+    },
+    "profile": {
+      "thermal": 98,
+      "radiation": 85,
+      "aridity": 100,
+      "topography": 88,
+      "geology": 80,
+      "subsurface": 20
+    }
+  },
+  {
+    "id": "moon-marius-hills",
+    "name": "Tubos de Lava de Marius Hills",
+    "celestialBody": "Luna",
+    "coordinates": "14.1° N, 56.8° W",
+    "missionObjective": "Construcción de hábitats subterráneos protegidos contra radiación cósmica y micrometeoritos.",
+    "requiredGeology": "basaltic-volcanic",
+    "requiresCaves": true,
+    "rawSpecs": {
+      "tempRange": "-20°C estable en subsuelo / -150°C a +110°C superficie",
+      "solarIrradiance": "Extrema en superficie",
+      "atmosphere": "Vacío",
+      "terrain": "Domos volcánicos y claraboyas de colapso"
+    },
+    "profile": {
+      "thermal": 65,
+      "radiation": 90,
+      "aridity": 100,
+      "topography": 75,
+      "geology": 95,
+      "subsurface": 100
+    }
+  },
+  {
+    "id": "moon-aristarchus",
+    "name": "Meseta de Aristarco",
+    "celestialBody": "Luna",
+    "coordinates": "23.7° N, 47.4° W",
+    "missionObjective": "Minería espacial (ISRU) de regolito rico en titanio, hierro y silicatos volcánicos.",
+    "requiredGeology": "basaltic-volcanic",
+    "requiresCaves": false,
+    "rawSpecs": {
+      "tempRange": "-160°C a +115°C",
+      "solarIrradiance": "Muy alta",
+      "atmosphere": "Vacío",
+      "terrain": "Meseta elevada y canales sinuosos"
+    },
+    "profile": {
+      "thermal": 70,
+      "radiation": 92,
+      "aridity": 100,
+      "topography": 65,
+      "geology": 92,
+      "subsurface": 30
+    }
+  },
+  {
+    "id": "mars-jezero",
+    "name": "Cráter Jezero (Delta Antiguo)",
+    "celestialBody": "Marte",
+    "coordinates": "18.38° N, 77.58° E",
+    "missionObjective": "Búsqueda de biofirmas fósiles en arcillas lacustres y pruebas de navegación autónoma de rovers.",
+    "requiredGeology": "sedimentary-evaporite",
+    "requiresCaves": false,
+    "rawSpecs": {
+      "tempRange": "-85°C a -10°C",
+      "solarIrradiance": "Moderada-Alta (polvo en suspensión)",
+      "atmosphere": "CO2 tenue (6 mbar)",
+      "terrain": "Abanico deltaico, rocas fracturadas y dunas"
+    },
+    "profile": {
+      "thermal": 82,
+      "radiation": 78,
+      "aridity": 96,
+      "topography": 60,
+      "geology": 90,
+      "subsurface": 15
+    }
+  },
+  {
+    "id": "mars-arsia-mons",
+    "name": "Cuevas de Flanco en Arsia Mons",
+    "celestialBody": "Marte",
+    "coordinates": "9.0° S, 120.0° W",
+    "missionObjective": "Exploración espeleológica robótica en claraboyas volcánicas con potencial astrobiológico.",
+    "requiredGeology": "basaltic-volcanic",
+    "requiresCaves": true,
+    "rawSpecs": {
+      "tempRange": "-95°C a -25°C",
+      "solarIrradiance": "Alta radiación UV",
+      "atmosphere": "Baja presión por gran altitud",
+      "terrain": "Laderas volcánicas escarpadas y pozos verticales"
+    },
+    "profile": {
+      "thermal": 86,
+      "radiation": 88,
+      "aridity": 98,
+      "topography": 90,
+      "geology": 96,
+      "subsurface": 100
+    }
+  },
+  {
+    "id": "mars-arcadia",
+    "name": "Arcadia Planitia (Hielo Subsuperficial)",
+    "celestialBody": "Marte",
+    "coordinates": "47.2° N, 184.3° E",
+    "missionObjective": "Aterrizaje de naves tripuladas en planicie lisa con acceso a glaciares enterrados a poca profundidad.",
+    "requiredGeology": "permafrost-regolith",
+    "requiresCaves": false,
+    "rawSpecs": {
+      "tempRange": "-100°C a -15°C",
+      "solarIrradiance": "Moderada",
+      "atmosphere": "CO2 tenue (7 mbar)",
+      "terrain": "Llanura volcánica suave de baja pendiente"
+    },
+    "profile": {
+      "thermal": 92,
+      "radiation": 68,
+      "aridity": 94,
+      "topography": 25,
+      "geology": 85,
+      "subsurface": 10
+    }
+  }
+]
