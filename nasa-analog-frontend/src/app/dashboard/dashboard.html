@@ -1,0 +1,693 @@
+<!-- PANTALLA DE ACCESO-->
+
+<div class="auth-gate" *ngIf="!currentUser">
+  <div class="auth-split">
+    <div class="auth-showcase">
+      <div class="brand-mark">
+        <span class="red-beacon"></span>
+        <span class="font-mono">TERRA-TWIN · PROGRAMA DE PROSPECCIÓN PLANETARIA</span>
+      </div>
+
+      <h1>
+        Encuentra en la Tierra los entornos más cercanos a la
+        <span class="editorial-italic highlight-red">Luna y Marte.</span>
+      </h1>
+
+      <p class="lead-copy">
+        Antes de enviar rovers, trajes o módulos habitables al espacio, los ingenieros necesitan probarlos en lugares
+        terrestres con clima, relieve y geología equivalentes. Esta plataforma cruza mediciones satelitales de la NASA
+        en tiempo real para descubrir y documentar nuevos sitios análogos.
+      </p>
+
+      <div class="feature-pillars">
+        <div class="pillar">
+          <span class="pillar-num font-mono">01</span>
+          <div>
+            <strong>Exploración satelital libre</strong>
+            <p>Busca cualquier ciudad o toca un punto del mapa para evaluar su clima y altitud al instante.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num font-mono">02</span>
+          <div>
+            <strong>Visor orbital comparativo</strong>
+            <p>Observa lado a lado la superficie real de la Luna o Marte desde órbita frente al terreno elegido en la
+              Tierra.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num font-mono">03</span>
+          <div>
+            <strong>Base de datos personalizada</strong>
+            <p>Cada cuenta conserva su propio registro de ubicaciones descubiertas y anotaciones de campo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="auth-card-wrapper">
+      <div class="auth-card">
+        <div class="auth-tabs">
+          <button [class.active]="authMode === 'login'" (click)="switchAuthMode('login')">
+            Iniciar sesión
+          </button>
+          <button [class.active]="authMode === 'register'" (click)="switchAuthMode('register')">
+            Crear cuenta
+          </button>
+        </div>
+
+        <h2>
+          {{ authMode === 'login' ? 'Accede a tu espacio de trabajo' : 'Registra tu cuenta de investigador' }}
+        </h2>
+        <p class="auth-hint">
+          {{
+          authMode === 'login'
+          ? 'Ingresa con tu correo para cargar tus sitios guardados.'
+          : 'Crea un perfil para almacenar tus propios hallazgos en la base de datos.'
+          }}
+        </p>
+
+        <div class="form-stack">
+          <div class="input-block" *ngIf="authMode === 'register'">
+            <label>Nombre completo</label>
+            <input type="text" [(ngModel)]="authName" placeholder="Ej. Natalia Esparza" />
+          </div>
+
+          <div class="input-block">
+            <label>Correo electrónico</label>
+            <input type="email" [(ngModel)]="authEmail" (keyup.enter)="submitAuth()"
+              placeholder="nombre@institucion.edu" />
+          </div>
+
+          <div class="input-block">
+            <label>Contraseña</label>
+            <input type="password" [(ngModel)]="authPassword" (keyup.enter)="submitAuth()" placeholder="••••••••" />
+          </div>
+
+          <div class="input-block" *ngIf="authMode === 'register'">
+            <label>Universidad, laboratorio o equipo (opcional)</label>
+            <input type="text" [(ngModel)]="authInstitution" (keyup.enter)="submitAuth()"
+              placeholder="Ej. Instituto Tecnológico de Durango" />
+          </div>
+
+          <div class="auth-alert" *ngIf="authError">
+            {{ authError }}
+          </div>
+
+          <button class="btn-crimson full-btn" (click)="submitAuth()" [disabled]="isAuthenticating">
+            {{
+            isAuthenticating
+            ? 'Verificando acceso...'
+            : authMode === 'login'
+            ? 'Entrar a la plataforma'
+            : 'Crear cuenta y entrar'
+            }}
+          </button>
+        </div>
+
+        <div class="demo-divider">
+          <span>o explora sin registrarte</span>
+        </div>
+
+        <button class="btn-outline-demo full-btn" (click)="enterDemoMode()" [disabled]="isAuthenticating">
+          Probar la versión demo
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PLATAFORMA PRINCIPAL-->
+<div class="app-shell" *ngIf="currentUser">
+  <header class="top-bar">
+    <div class="brand">
+      <span class="red-beacon"></span>
+      <div>
+        <h1>TERRA-TWIN</h1>
+        <p class="subtitle">Prospección de análogos terrestres · <span class="editorial-italic">Luna y Marte</span></p>
+      </div>
+    </div>
+
+    <nav class="nav-tabs">
+      <button class="tab-btn" [class.active]="activeTab === 'explorer'" (click)="setTab('explorer')">
+        Explorador satelital
+      </button>
+      <button class="tab-btn" [class.active]="activeTab === 'analysis'" (click)="setTab('analysis')">
+        Comparativa y diagnóstico
+      </button>
+      <button class="tab-btn" [class.active]="activeTab === 'ranking'" (click)="setTab('ranking')">
+        Ranking de candidatos ({{ results.length }})
+      </button>
+      <button class="tab-btn" [class.active]="activeTab === 'database'" (click)="setTab('database')">
+        Mi base de datos ({{ savedDiscoveries.length }})
+      </button>
+    </nav>
+
+    <div class="user-session-pill">
+      <div class="user-meta">
+        <strong>{{ currentUser.name }}</strong>
+        <span>{{ currentUser.institution }}</span>
+      </div>
+      <button class="btn-logout" (click)="logout()">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <div class="error-banner" *ngIf="errorMessage">
+    {{ errorMessage }}
+  </div>
+
+  <!-- PESTAÑA 1: EXPLORADOR SATELITAL Y MAPA-->
+  <div class="tab-view explorer-layout" [hidden]="activeTab !== 'explorer'">
+    <aside class="control-sidebar">
+      <div class="surface-card">
+        <span class="kicker-tag">PASO 01 · DESTINO ESPACIAL</span>
+        <h3>Selecciona la zona fuera de la Tierra</h3>
+        <p class="micro-help">Elige el cráter o región lunar o marciana que deseas simular.</p>
+
+        <select class="dark-select" [(ngModel)]="selectedTargetId" (change)="onTargetChange()">
+          <option *ngFor="let t of targets" [value]="t.id">
+            {{ t.celestialBody }} — {{ t.name }}
+          </option>
+        </select>
+
+        <div class="mission-brief" *ngIf="activeTarget">
+          <div class="brief-head">
+            <span class="pill-body" [class.mars]="activeTarget.celestialBody === 'Marte'">
+              {{ activeTarget.celestialBody }}
+            </span>
+            <span class="font-mono coord-muted">{{ activeTarget.coordinates }}</span>
+          </div>
+          <p>{{ activeTarget.missionObjective }}</p>
+        </div>
+      </div>
+
+      <div class="surface-card">
+        <span class="kicker-tag">PASO 02 · PRIORIDADES DE MISIÓN</span>
+        <h3>Ajusta qué factores importan más</h3>
+        <p class="micro-help">
+          Sube al 100 % lo que tu misión necesita probar; baja a 0 % lo que no es relevante. El ranking se recalcula al
+          instante.
+        </p>
+
+        <div class="sliders-stack">
+          <div class="slider-row">
+            <div class="slider-head"><span>Frío extremo</span><strong class="font-mono accent-blue">{{ weights.thermal
+                }} %</strong></div>
+            <input type="range" min="0" max="100" [(ngModel)]="weights.thermal" (change)="runSimulation()" />
+          </div>
+          <div class="slider-row">
+            <div class="slider-head"><span>Luz y radiación solar</span><strong class="font-mono accent-blue">{{
+                weights.radiation }} %</strong></div>
+            <input type="range" min="0" max="100" [(ngModel)]="weights.radiation" (change)="runSimulation()" />
+          </div>
+          <div class="slider-row">
+            <div class="slider-head"><span>Sequedad del terreno</span><strong class="font-mono accent-blue">{{
+                weights.aridity }} %</strong></div>
+            <input type="range" min="0" max="100" [(ngModel)]="weights.aridity" (change)="runSimulation()" />
+          </div>
+          <div class="slider-row">
+            <div class="slider-head"><span>Relieve e inclinación</span><strong class="font-mono accent-blue">{{
+                weights.topography }} %</strong></div>
+            <input type="range" min="0" max="100" [(ngModel)]="weights.topography" (change)="runSimulation()" />
+          </div>
+          <div class="slider-row">
+            <div class="slider-head"><span>Tipo de roca y suelo</span><strong class="font-mono accent-blue">{{
+                weights.geology }} %</strong></div>
+            <input type="range" min="0" max="100" [(ngModel)]="weights.geology" (change)="runSimulation()" />
+          </div>
+          <div class="slider-row">
+            <div class="slider-head"><span>Cuevas y refugios</span><strong class="font-mono accent-blue">{{
+                weights.subsurface }} %</strong></div>
+            <input type="range" min="0" max="100" [(ngModel)]="weights.subsurface" (change)="runSimulation()" />
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="map-stage">
+      <div class="map-toolbar">
+        <div class="search-box" #searchBoxContainer>
+          <div class="search-input-wrap">
+            <input type="text" class="search-input" [(ngModel)]="searchQuery" (input)="onSearchInputChange()"
+              (keyup.enter)="searchLocationByText()"
+              placeholder="Busca cualquier lugar, coordenada o enlace de Google Maps..." />
+
+            <div class="search-dropdown" *ngIf="searchDropdownOpen">
+              <div class="dropdown-header">
+                <span>
+                  {{
+                  isSearchingPlace
+                  ? 'Buscando ubicaciones en el mundo...'
+                  : searchSuggestions.length > 0
+                  ? 'Selecciona la ubicación exacta para marcarla en el mapa:'
+                  : 'Sin coincidencias'
+                  }}
+                </span>
+                <button type="button" class="btn-close-drop" (click)="closeSearchDropdown()">Cerrar</button>
+              </div>
+
+              <div class="dropdown-empty" *ngIf="!isSearchingPlace && searchNoResults">
+                No se encontraron lugares con "{{ searchQuery }}". Intenta agregar el país o estado.
+              </div>
+
+              <button type="button" class="suggestion-item" *ngFor="let item of searchSuggestions"
+                (click)="selectSearchSuggestion(item)">
+                <div class="sug-main">
+                  <strong>{{ item.name }}</strong>
+                  <span>{{ item.subtitle }} · {{ item.type }}</span>
+                </div>
+                <div class="sug-right">
+                  <span class="sug-coords font-mono">{{ item.lat }}°, {{ item.lon }}°</span>
+                  <span class="sug-action">Ubicar punto</span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <button class="btn-secondary-dark" (click)="searchLocationByText()" [disabled]="isSearchingPlace">
+            {{ isSearchingPlace ? 'Buscando...' : 'Buscar' }}
+          </button>
+        </div>
+
+        <button class="tool-btn" [class.red-active]="prospectMode" (click)="toggleProspectMode()">
+          {{ prospectMode ? 'Clic en mapa: Activo' : 'Clic en mapa: Pausado' }}
+        </button>
+
+        <button class="tool-btn" [class.blue-active]="showCatalogMarkers" (click)="toggleCatalogMarkers()">
+          Catálogo base ({{ results.length }})
+        </button>
+
+        <button class="tool-btn" [class.blue-active]="showNasaGibsLayer" (click)="toggleNasaGibs()">
+          Capa satelital NASA
+        </button>
+      </div>
+
+      <div class="prospect-drawer" *ngIf="prospectMode">
+        <span>
+          Haz clic sobre cualquier región del mapa (o busca arriba) para obtener telemetría satelital de la NASA; luego
+          ajusta el tipo de suelo y cuevas en la ficha inferior.
+        </span>
+        <span *ngIf="isProspecting" class="pulse-amber">Consultando telemetría satelital...</span>
+      </div>
+
+      <div class="map-container-box" [class.crosshair]="prospectMode">
+        <div #mapContainer class="leaflet-canvas"></div>
+
+        <div class="map-legend">
+          <span><i class="dot red"></i> Sitio explorado o guardado</span>
+          <span *ngIf="showCatalogMarkers"><i class="dot amber"></i> Top 3 catálogo</span>
+          <span *ngIf="showCatalogMarkers"><i class="dot blue"></i> Catálogo científico</span>
+        </div>
+      </div>
+
+      <div class="selected-spotlight" *ngIf="selectedSite">
+        <div class="water-warning-banner" *ngIf="selectedSite.isWaterBody">
+          Coordenada ubicada sobre océano o cuerpo de agua. Selecciona terreno continental para evaluar aterrizaje o rovers.
+        </div>
+
+        <div class="spotlight-main">
+          <div>
+            <span class="region-label">{{ selectedSite.country }}</span>
+            <h2>{{ selectedSite.name }}</h2>
+            <p class="spot-desc">{{ selectedSite.highlights }}</p>
+          </div>
+
+          <div class="kpi-group">
+            <div class="kpi-card">
+              <span>Parecido ambiental</span>
+              <strong class="font-mono accent-blue">{{ selectedSite.scores.planetarySimilarity }} %</strong>
+            </div>
+            <div class="kpi-card">
+              <span>Facilidad de acceso</span>
+              <strong class="font-mono accent-amber">{{ selectedSite.scores.logisticViability }} %</strong>
+            </div>
+            <div class="kpi-card red-border">
+              <span>Puntaje global</span>
+              <strong class="font-mono accent-red">{{ selectedSite.scores.missionReadinessScore }} %</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Caracterización geológica y subterránea en tiempo real -->
+        <div class="geology-bar" *ngIf="selectedSite.isCustom">
+          <div class="geo-control">
+            <label>Tipo de roca o suelo predominante (recalcula al instante):</label>
+            <select class="name-input" [(ngModel)]="prospectGeology" (ngModelChange)="onCustomGeologyOrCavesChange()">
+              <option value="basaltic-volcanic">Basalto volcánico (Mares lunares / Volcanes de Marte)</option>
+              <option value="anorthosite-regolith">Anortosita cristalina (Tierras altas y Polo Sur Lunar)</option>
+              <option value="sedimentary-evaporite">Sedimentos, salinas o arcillas (Antiguos lagos marcianos)</option>
+              <option value="permafrost-regolith">Permafrost o hielo (Polos y glaciares subsuperficiales)</option>
+            </select>
+          </div>
+
+          <label class="cave-toggle-card" [class.active]="prospectHasCaves">
+            <input type="checkbox" [(ngModel)]="prospectHasCaves" (ngModelChange)="onCustomGeologyOrCavesChange()" />
+            <div>
+              <strong>Presencia de cuevas o tubos de lava</strong>
+              <span>Actívalo si el sitio cuenta con cavidades subterráneas</span>
+            </div>
+          </label>
+        </div>
+
+        <div class="geology-verified-bar" *ngIf="!selectedSite.isCustom">
+          <span class="verified-tag font-mono">GEOLOGÍA VERIFICADA DE CATÁLOGO</span>
+          <span>{{ getGeologyLabel(selectedSite.geologyType) }}</span>
+          <span>·</span>
+          <strong>{{ selectedSite.hasCaves ? 'Con sistema de cuevas / tubos volcánicos' : 'Superficie abierta sin cuevas' }}</strong>
+        </div>
+
+        <div class="edit-save-panel">
+          <div class="edit-fields">
+            <div class="field-group">
+              <label>Nombre del lugar (detectado automáticamente, puedes modificarlo):</label>
+              <input type="text" class="name-input" [(ngModel)]="customSiteName"
+                placeholder="Ej. Durango, Durango, México" />
+            </div>
+            <div class="field-group grow">
+              <label>Notas de observación para tu base de datos:</label>
+              <input type="text" class="name-input" [(ngModel)]="customSiteNotes"
+                placeholder="Escribe observaciones sobre este sitio..." />
+            </div>
+          </div>
+
+          <div class="action-row">
+            <div class="save-cluster">
+              <button class="btn-crimson" (click)="saveCurrentToDatabase()" [disabled]="isSavingDB">
+                {{ isSavingDB ? 'Guardando...' : 'Guardar en mi base de datos' }}
+              </button>
+              <span class="saved-msg" *ngIf="saveStatusMessage">{{ saveStatusMessage }}</span>
+            </div>
+
+            <button class="btn-secondary-dark" (click)="setTab('analysis')">
+              Abrir visor orbital y diagnóstico
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PESTAÑA 2: COMPARATIVA ORBITAL Y DIAGNÓSTICO-->
+  <div class="tab-view analysis-layout" *ngIf="activeTab === 'analysis' && selectedSite && activeTarget">
+    <div class="section-banner">
+      <div>
+        <span class="kicker-tag">VISOR ORBITAL NASA TREKS Y EVALUACIÓN DE VIABILIDAD</span>
+        <h2>
+          {{ selectedSite.name }}
+          <span class="editorial-italic accent-red">frente a</span>
+          {{ activeTarget.name }}
+        </h2>
+        <p class="section-intro">
+          Inspecciona en paralelo las imágenes orbitales reales de {{ activeTarget.celestialBody }} tomadas por sondas
+          de la NASA junto al relieve terrestre seleccionado, y revisa su compatibilidad científica.
+        </p>
+      </div>
+      <div class="analysis-btns">
+        <button class="btn-secondary-dark" (click)="setTab('explorer')">Volver al mapa</button>
+        <button class="btn-secondary-dark" (click)="exportMarkdownReport()">Descargar ficha (.md)</button>
+        <button class="btn-crimson" (click)="exportMissionReport()">Imprimir o guardar ficha</button>
+      </div>
+    </div>
+
+    <!-- VISOR ORBITAL (LUNA / MARTE VS TIERRA)-->
+    <div class="orbital-dual-grid">
+      <!-- Panel izquierdo: Órbita de la Luna o Marte -->
+      <div class="orbital-card planet-border">
+        <div class="orbital-header">
+          <div>
+            <span class="orbital-badge red">
+              ÓRBITA DE {{ activeTarget.celestialBody.toUpperCase() }} · NASA TREK
+            </span>
+            <h3>{{ activeTarget.name }}</h3>
+          </div>
+          <button class="btn-mini-recenter" (click)="recenterPlanetaryOrbit()">
+            Centrar objetivo
+          </button>
+        </div>
+
+        <div class="orbital-map-frame">
+          <div #planetaryMapContainer class="orbital-leaflet"></div>
+          <div class="orbital-hud font-mono">
+            <span>COORD: {{ activeTarget.coordinates }}</span>
+            <span>SENSOR: {{ activeTarget.celestialBody === 'Marte' ? 'MGS MOLA' : 'LRO WAC' }}</span>
+          </div>
+        </div>
+
+        <div class="orbital-specs-bar">
+          <div>
+            <span>Temperatura</span>
+            <strong>{{ activeTarget.rawSpecs.tempRange }}</strong>
+          </div>
+          <div>
+            <span>Atmósfera</span>
+            <strong>{{ activeTarget.rawSpecs.atmosphere }}</strong>
+          </div>
+          <div>
+            <span>Morfología</span>
+            <strong>{{ activeTarget.rawSpecs.terrain }}</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel derecho: Órbita de la Tierra -->
+      <div class="orbital-card earth-border">
+        <div class="orbital-header">
+          <div>
+            <span class="orbital-badge blue">
+              ÓRBITA TERRESTRE · ANÁLOGO EN EVALUACIÓN
+            </span>
+            <h3>{{ selectedSite.name }}</h3>
+          </div>
+          <button class="btn-mini-recenter" (click)="recenterEarthOrbit()">
+            Centrar sitio
+          </button>
+        </div>
+
+        <div class="orbital-map-frame">
+          <div #earthCompareMapContainer class="orbital-leaflet"></div>
+          <div class="orbital-hud font-mono">
+            <span>LAT/LON: {{ selectedSite.lat }}°, {{ selectedSite.lon }}°</span>
+            <span>SIMILITUD: {{ selectedSite.scores.planetarySimilarity }} %</span>
+          </div>
+        </div>
+
+        <div class="orbital-specs-bar">
+          <div>
+            <span>Temperatura anual</span>
+            <strong>{{ selectedSite.climateData.tMin }} °C a {{ selectedSite.climateData.tMax }} °C</strong>
+          </div>
+          <div>
+            <span>Irradiancia solar</span>
+            <strong>{{ selectedSite.climateData.solar }} kWh/m²/d</strong>
+          </div>
+          <div>
+            <span>Región</span>
+            <strong>{{ selectedSite.country }}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Selector rápido de destino espacial sin salir del visor orbital -->
+    <div class="orbital-switcher-bar">
+      <span class="font-mono">CAMBIAR DESTINO ESPACIAL EN EL VISOR:</span>
+      <div class="target-chips">
+        <button *ngFor="let t of targets" [class.active]="selectedTargetId === t.id"
+          (click)="selectedTargetId = t.id; onTargetChange()">
+          {{ t.celestialBody }} · {{ t.name }}
+        </button>
+      </div>
+    </div>
+
+    <!-- GRÁFICA RADAR Y DIAGNÓSTICO CIENTÍFICO-->
+    <div class="analysis-grid">
+      <div class="surface-card radar-panel">
+        <h3>Gráfica de huella ambiental</h3>
+        <p class="micro-help">
+          El polígono rojo representa el destino en {{ activeTarget.celestialBody }} y el azul representa el sitio en la
+          Tierra. Cuanto más coinciden sus vértices, mayor es la fidelidad experimental.
+        </p>
+        <div class="radar-wrapper">
+          <canvas #radarCanvas></canvas>
+        </div>
+
+        <div class="climate-boxes">
+          <div class="c-box">
+            <span>Temperatura mínima</span>
+            <strong class="font-mono accent-blue">{{ selectedSite.climateData.tMin }} °C</strong>
+          </div>
+          <div class="c-box">
+            <span>Temperatura máxima</span>
+            <strong class="font-mono accent-amber">{{ selectedSite.climateData.tMax }} °C</strong>
+          </div>
+          <div class="c-box">
+            <span>Irradiancia solar</span>
+            <strong class="font-mono accent-red">{{ selectedSite.climateData.solar }} kWh/m²</strong>
+          </div>
+          <div class="c-box">
+            <span>Precipitación diaria</span>
+            <strong class="font-mono">{{ selectedSite.climateData.precip }} mm</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="critique-stack">
+        <div class="diag-card strength">
+          <h3>Por qué funciona este lugar como análogo</h3>
+          <ul>
+            <li *ngFor="let item of selectedSite.critique.strongAnalogies">
+              <strong>{{ item.dimension }} ({{ item.matchPct }} % de coincidencia):</strong> {{ item.detail }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="diag-card gap">
+          <h3>En qué se diferencia del entorno espacial</h3>
+          <ul>
+            <li *ngFor="let item of selectedSite.critique.analogyGaps">
+              <strong>{{ item.dimension }} ({{ item.matchPct }} % de coincidencia):</strong> {{ item.detail }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="diag-card limit">
+          <h3>Limitaciones físicas no reproducibles en la Tierra ({{ activeTarget.celestialBody }})</h3>
+          <ul>
+            <li *ngFor="let lim of selectedSite.critique.planetaryLimitations">{{ lim }}</li>
+          </ul>
+        </div>
+
+        <div class="diag-card strength" *ngIf="selectedSite.critique.validationProtocols?.length">
+          <h3>Protocolos de exploración y pruebas recomendadas</h3>
+          <ul class="protocol-list">
+            <li *ngFor="let proto of selectedSite.critique.validationProtocols">{{ proto }}</li>
+          </ul>
+        </div>
+
+        <div class="diag-card logistics-card">
+          <h3>Condiciones logísticas para el equipo de campo</h3>
+          <p>{{ selectedSite.logisticNotes }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PESTAÑA 3: RANKING DE CANDIDATOS-->
+  <div class="tab-view ranking-layout" *ngIf="activeTab === 'ranking'">
+    <div class="section-banner">
+      <div>
+        <span class="kicker-tag">CLASIFICACIÓN ORDENADA POR SIMILITUD</span>
+        <h2>Mejores sitios terrestres para <span class="editorial-italic accent-red">{{ activeTarget?.name }}</span>
+        </h2>
+        <p class="section-intro">
+          Los lugares se ordenan automáticamente del mayor al menor porcentaje de coincidencia según las prioridades que
+          ajustaste en el explorador.
+        </p>
+      </div>
+      <div class="filter-pills">
+        <button [class.active]="activeFilter === 'all'" (click)="activeFilter = 'all'">Todos ({{ results.length
+          }})</button>
+        <button [class.active]="activeFilter === 'understudied'" (click)="activeFilter = 'understudied'">Poco
+          explorados</button>
+        <button [class.active]="activeFilter === 'benchmark'" (click)="activeFilter = 'benchmark'">Benchmarks
+          clásicos</button>
+        <button [class.active]="activeFilter === 'caves'" (click)="activeFilter = 'caves'">Con cuevas</button>
+      </div>
+    </div>
+
+    <div class="cards-grid">
+      <div class="site-grid-card" *ngFor="let site of filteredResults; let i = index"
+        [class.selected-card]="selectedSite?.id === site.id">
+        <div class="card-top-row">
+          <span class="rank-pill font-mono">#{{ i + 1 }}</span>
+          <span class="cat-badge" *ngIf="site.category === 'understudied'">Potencial poco estudiado</span>
+          <span class="cat-badge" *ngIf="site.category === 'benchmark'">Benchmark clásico NASA</span>
+          <span class="cat-badge amber" *ngIf="site.hasCaves">Sistema subterráneo</span>
+        </div>
+
+        <h3>{{ site.name }}</h3>
+        <span class="country-sub">{{ site.country }}</span>
+        <p class="card-desc">{{ site.highlights }}</p>
+
+        <div class="card-metrics">
+          <div>
+            <span>Parecido</span>
+            <strong class="font-mono accent-blue">{{ site.scores.planetarySimilarity }} %</strong>
+          </div>
+          <div>
+            <span>Acceso</span>
+            <strong class="font-mono accent-amber">{{ site.scores.logisticViability }} %</strong>
+          </div>
+          <div>
+            <span>Global</span>
+            <strong class="font-mono accent-red">{{ site.scores.missionReadinessScore }} %</strong>
+          </div>
+        </div>
+
+        <div class="card-footer-btns">
+          <button class="btn-secondary-dark" (click)="selectSite(site, true, true)">Ubicar en mapa</button>
+          <button class="btn-crimson" (click)="selectSite(site, false); setTab('analysis')">Visor y diagnóstico</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PESTAÑA 4: BASE DE DATOS PERSONAL DEL USUARIO-->
+  <div class="tab-view db-layout" *ngIf="activeTab === 'database'">
+    <div class="section-banner">
+      <div>
+        <span class="kicker-tag">REGISTRO PERSONAL · {{ currentUser.name.toUpperCase() }}</span>
+        <h2>Base de datos de <span class="editorial-italic accent-red">sitios descubiertos</span></h2>
+        <p class="section-intro">
+          Todos los lugares que exploras y guardas quedan vinculados a tu cuenta en el servidor para consultarlos o
+          ubicarlos nuevamente en cualquier momento.
+        </p>
+      </div>
+      <button class="btn-crimson" (click)="prospectMode = true; setTab('explorer')">
+        Explorar nuevo lugar en el mapa
+      </button>
+    </div>
+
+    <div class="empty-db" *ngIf="savedDiscoveries.length === 0">
+      <h3>Tu base de datos personal aún está vacía</h3>
+      <p>
+        Dirígete al <strong>Explorador satelital</strong>, busca una ciudad como <em>"Durango, Durango"</em> o haz clic
+        en cualquier punto del mapa, edita el nombre si lo deseas y presiona <strong>Guardar en mi base de
+          datos</strong>.
+      </p>
+    </div>
+
+    <div class="cards-grid" *ngIf="savedDiscoveries.length > 0">
+      <div class="site-grid-card" *ngFor="let item of savedDiscoveries">
+        <div class="card-top-row">
+          <span class="cat-badge">Guardado el {{ item.savedAt }}</span>
+          <span class="font-mono coord-muted">{{ item.lat }}°, {{ item.lon }}°</span>
+        </div>
+
+        <h3>{{ item.name }}</h3>
+        <span class="country-sub">Evaluado para: {{ item.matchedTargetName }}</span>
+        <p class="card-desc">{{ item.highlights }}</p>
+
+        <div class="card-metrics">
+          <div>
+            <span>Parecido</span>
+            <strong class="font-mono accent-blue">{{ item.scores.planetarySimilarity }} %</strong>
+          </div>
+          <div>
+            <span>Temp. mínima</span>
+            <strong class="font-mono accent-amber">{{ item.climateData.tMin }} °C</strong>
+          </div>
+          <div>
+            <span>Solar</span>
+            <strong class="font-mono accent-red">{{ item.climateData.solar }}</strong>
+          </div>
+        </div>
+
+        <div class="card-footer-btns">
+          <button class="btn-secondary-dark" (click)="selectSite(item, true, true)">Ubicar en mapa</button>
+          <button class="btn-danger-outline" (click)="deleteFromDatabase(item.id)">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

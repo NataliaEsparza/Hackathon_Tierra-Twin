@@ -1,0 +1,112 @@
+@import 'leaflet/dist/leaflet.css';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Outfit:wght@600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #050507;
+  color: #f4f4f6;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.editorial-italic {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.font-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Marcadores del mapa*/
+.nasa-pin-wrapper {
+  background: transparent;
+  border: none;
+}
+
+.nasa-pin {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #38bdf8;
+  border: 2px solid #050507;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.85);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.nasa-pin.top-match {
+  background: #facc15;
+  border-color: #050507;
+  box-shadow: 0 0 14px rgba(250, 204, 21, 0.9);
+  width: 19px;
+  height: 19px;
+}
+
+.nasa-pin.custom-pin {
+  background: #ff2a4b;
+  border-color: #ffffff;
+  box-shadow: 0 0 16px rgba(255, 42, 75, 0.95);
+  width: 21px;
+  height: 21px;
+}
+
+.nasa-pin.selected {
+  background: #e11d48;
+  border-color: #ffffff;
+  box-shadow: 0 0 18px #ff2a4b, 0 0 32px rgba(225, 29, 72, 0.9);
+  transform: scale(1.35);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272f;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e11d48;
+}
+
+@media print {
+
+  .top-bar,
+  .control-sidebar,
+  .map-toolbar,
+  .prospect-drawer,
+  .map-container-box,
+  .analysis-btns {
+    display: none !important;
+  }
+
+  body,
+  .app-shell {
+    background: #ffffff !important;
+    color: #09090b !important;
+  }
+}
